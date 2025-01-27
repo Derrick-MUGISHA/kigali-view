@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faHeart, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faInstagram, faTwitter, faTiktok, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
@@ -6,14 +6,34 @@ import './Navbar.css';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false); // State for mobile menu
+    const [isSticky, setIsSticky] = useState(false); // State for sticky navbar
 
     const toggleMobileMenu = () => {
         setMenuOpen(!menuOpen); // Toggle the mobile menu
     };
 
+    const handleScroll = () => {
+        // Check scroll position
+        if (window.scrollY > 50) { // Adjust this value as needed
+            setIsSticky(true);
+        } else {
+            setIsSticky(false);
+        }
+    };
+
+    useEffect(() => {
+        // Add scroll event listener when component mounts
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup event listener on component unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <>
-            <nav className="navbar">
+            <nav className={`navbar ${isSticky ? 'sticky' : ''}`}>
                 {/* Left Side: Logo */}
                 <div className="logo">
                     <a href="/" className="logo-link">Logo</a>
@@ -98,7 +118,7 @@ const Navbar = () => {
             </nav>
 
             {/* Second Navbar */}
-            <nav className="second-navbar">
+            <nav className={`second-navbar ${isSticky ? 'sticky' : ''}`}>
                 <div className="second-nav-links">
                     <ul>
                         <li className="nav-item-2">

@@ -1,11 +1,13 @@
 
-import Navbar  from "./component/Navbar";
+import Navbar from "./component/Navbar";
+import ImageCarousel from "./component/imageHero";
 
 function App() {
   return (
-   <>
-   <Navbar />
-   </>
+    <>
+      <Navbar />
+      <ImageCarousel /> {/* Corrected the typo here */}
+    </>
   );
 }
 

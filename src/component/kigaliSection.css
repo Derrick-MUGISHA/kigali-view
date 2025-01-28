@@ -1,0 +1,41 @@
+/* Style the container of the Columbus section */
+.columbus-section {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 40px 20px; /* Add padding for spacing */
+    text-align: center; /* Center align the content */
+}
+
+/* Title style */
+.columbus-title {
+    font-size: 2.5rem; /* Larger font size for emphasis */
+    font-weight: bold; /* Make the title bold */
+    color: #333; /* Dark color for text */
+    margin-bottom: 20px; /* Add space below the title */
+}
+
+/* Paragraph styles */
+.columbus-paragraph,
+.columbus-description {
+    font-size: 1.2rem; /* Readable text size */
+    line-height: 1.8; /* Increase line spacing for better readability */
+    color: #555; /* Dark gray color for text */
+    margin-bottom: 20px; /* Add space between paragraphs */
+    max-width: 800px; /* Limit the width of the text block */
+    margin-left: auto;
+    margin-right: auto; /* Center the text block */
+}
+
+/* Call-to-action style */
+.columbus-cta {
+    font-size: 1.4rem; /* Slightly larger font for emphasis */
+    font-weight: bold; /* Make it bold */
+    color: #e86c4b; /* A warm color for emphasis */
+    text-transform: uppercase; /* Make the text uppercase */
+    margin-top: 30px; /* Add extra space above */
+}
+
+/* Optional: Add a border or some effect when hovering over the section */
+.columbus-section:hover {
+    background-color: #f1f1f1; /* Change the background color when hovering */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow for effect */
+}

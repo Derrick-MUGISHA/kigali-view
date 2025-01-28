@@ -1,0 +1,107 @@
+/* Overall section styling */
+.columbus-news-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Title and subtitle */
+.columbus-news-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.columbus-news-header h3 {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+/* Cards Section */
+.columbus-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Individual card styling */
+.columbus-card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.columbus-card:hover {
+    transform: scale(1.05);
+}
+
+.columbus-card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.columbus-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.columbus-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.columbus-card:hover .columbus-card-overlay {
+    opacity: 1;
+}
+
+.columbus-card-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+    z-index: 2;
+}
+
+.columbus-card-text h4 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.columbus-card-text p {
+    font-size: 1rem;
+}
+
+/* See More Button */
+.columbus-see-more {
+    margin-top: 20px;
+}
+
+.see-more-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #e86c4b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.see-more-button:hover {
+    background-color: #d65f42;
+}

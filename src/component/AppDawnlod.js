@@ -1,42 +1,30 @@
 import React from 'react';
+import './AppDawnlod.css';
 
 
 const App = () => {
     return (
-        <div className="columbus-awards-section">
-            <div className="columbus-content">
-                {/* Left side: Logo and Text */}
-                <div className="columbus-left">
-                    <div className="columbus-logo">
-                        <img
-                            src="your-logo-url-here" // Replace with your logo URL
-                            alt="Columbus Logo"
-                            className="logo-img"
-                        />
-                    </div>
-                    <div className="columbus-awards-text">
-                        <p>
-                            Columbus has been named a Top 10 Best Big City in the U.S., One of the
-                            Best Food Cities in the U.S. and One of the Friendliest Cities in the
-                            U.S. by Condé Nast Traveler’s 2024 Readers’ Choice Awards.
-                        </p>
-                    </div>
-                </div>
+        <section className="rewards-section">
+            <div className="text-content">
+                {/* Heading */}
+                <h2 className="section-heading">Explore. Earn. Redeem. in Kigali!</h2>
 
-                {/* Right side: Video */}
-                <div className="columbus-video">
-                    <iframe
-                        width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/your-video-id" // Replace with your video ID
-                        title="Columbus Video"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    ></iframe>
+                <div className="description-text">
+                    <p>
+                        Discover the best of Kigali with the KIGALI VIEW Rewards app! Find exciting events, top attractions, and exclusive local deals. Earn rewards like merchandise, gift cards, and more—all in one convenient place.
+                    </p>
+                    <span>
+                        Download the KIGALI VIEW Rewards app now and start exploring the magic of Kigali!
+                    </span>
                 </div>
             </div>
-        </div>
+
+            {/* Right side: Video */}
+            <div className="video-container">
+                <img src="your-video-url" alt="Video Thumbnail" />
+            </div>
+        </section>
     );
 };
-export default App;
+
+export default App;;

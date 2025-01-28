@@ -15,7 +15,7 @@ const HotelBooking = () => {
   return (
     <div className="hotel-booking-container">
       <h2 className="hotel-booking-title">CHECK HOTEL RATES</h2>
-      <p className="hotel-booking-subtitle">BOOK WITH EXPERIENCE COLUMBUS FOR EXCLUSIVE OFFERS!</p>
+      <p className="hotel-booking-subtitle">BOOK WITH EXPERIENCE KIGALI FOR EXCLUSIVE OFFERS!</p>
 
       <div className="booking-form">
         <input

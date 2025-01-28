@@ -1,24 +1,51 @@
 .travel-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 20px;
   }
   
-  .travel-heading {
+  /* Style for each header section */
+  .section {
+    margin-bottom: 30px; /* Space between sections */
+  }
+  
+  /* Primary header style */
+  .primary-heading {
     font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
-    transition: text-decoration 0.3s ease; /* Smooth underline transition */
+    transition: text-decoration 0.3s ease;
   }
   
-  .travel-heading:hover {
-    text-decoration: underline; /* Underline on hover */
+  .primary-text {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
   }
   
+  /* Secondary header style */
+  .secondary-heading {
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: text-decoration 0.3s ease;
+  }
+  
+  .secondary-text {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  /* Hover effect for headers */
+  .primary-heading:hover,
+  .secondary-heading:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style for the image container */
   .image-container {
     display: flex;
     gap: 20px; /* Space between images */
+    margin-top: 20px;
   }
   
   .travel-image {
@@ -26,10 +53,11 @@
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s ease; /* Smooth zoom effect */
+    transition: transform 0.3s ease;
   }
   
+  /* Zoom effect on image hover */
   .travel-image:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.05);
   }
   

@@ -11,6 +11,7 @@ import Fest from "./component/fest";
 import Market from "./component/Market";
 import Shorts from "./component/shorts";
 import TravelSection from './component/TravelSection';
+import Footer from './component/Footer';
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
       <Market />
       <Shorts />
       <TravelSection />
+      <Footer />
+      
     </>
   );
 }

@@ -16,9 +16,10 @@ const ColumbusAwardsSection = () => {
             </div>
             <div className="columbus-awards-text">
               <p>
-                Columbus has been named a Top 10 Best Big City in the U.S., One of the
-                Best Food Cities in the U.S. and One of the Friendliest Cities in the
-                U.S. by Condé Nast Traveler’s 2024 Readers’ Choice Awards.
+                
+Kigali has been celebrated as one of Africa’s Cleanest Cities, a Top Destination for Innovation and Sustainability, and one of the Friendliest and Safest Cities in the World by global travel experts and organizations like Condé Nast Traveler and the World Travel Awards.
+
+With its vibrant culture, breathtaking scenery, and a culinary scene that’s gaining international acclaim, Kigali is not just a city—it’s an experience. From its lush green hills to its thriving arts and tech hubs, Kigali is a city that continues to inspire and amaze.
               </p>
             </div>
           </div>

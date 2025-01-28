@@ -29,7 +29,7 @@ const imageCards = [
   
     return (
       <div className="columbus-snapshots">
-        <h2>COLUMBUS SNAPSHOTS</h2>
+        <h2>Yes, KIGALI logo</h2>
         <p>
           Share your experiences in Columbus with us on social by using{' '}
           <strong>#yesColumbus</strong>. We’d love to see your favorite moments,

@@ -1,0 +1,55 @@
+/* Overall section styling */
+.rewards-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px; /* Add gap between content and image */
+    max-width: 1200px; /* Limit the max width of the section */
+    margin: 0 auto; /* Center the section horizontally */
+}
+
+/* Left side content */
+.text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 55%; /* Ensure the content doesn't take more than half the width */
+}
+
+/* Heading styling */
+.section-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333; /* Dark color for the heading */
+}
+
+/* Paragraph styling */
+.description-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555; /* Lighter grey color for the paragraph */
+    margin-bottom: 10px; /* Space between paragraph and span */
+}
+
+/* Span styling */
+.description-text span {
+    font-size: 1.1rem;
+    color: #FFA500; /* Orange color for the span */
+}
+
+/* Right side video image */
+.video-container {
+    max-width: 45%;
+    display: flex;
+    justify-content: center; /* Centers the image in the div */
+}
+
+.video-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}

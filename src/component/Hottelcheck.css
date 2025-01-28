@@ -1,0 +1,157 @@
+/* General Styling */
+.hotel-check-container {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  .hotel-check-container h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .hotel-check-container p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #777;
+    font-size: 16px;
+  }
+  
+  .hotel-check-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .dates-section, .guests-section, .search-btn-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dropdown-btn {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 12px 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    width: 100%;
+  }
+  
+  .calendar-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    z-index: 1000;
+  }
+  
+  .dropdown-item {
+    margin-bottom: 10px;
+  }
+  
+  .date-picker {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+  }
+  
+  .date-picker:focus {
+    outline: none;
+    border-color: #2ecc71;
+  }
+  
+  .guest-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .guest-control button {
+    background-color: #ff7f50;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .guest-control button:hover {
+    background-color: #e67e22;
+  }
+  
+  .apply-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .apply-btn {
+    background-color: #2ecc71;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .apply-btn:hover {
+    background-color: #27ae60;
+  }
+  
+  .search-btn-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-btn {
+    background-color: #2ecc71;
+    padding: 12px 30px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+  
+  .search-btn:hover {
+    background-color: #27ae60;
+  }
+  

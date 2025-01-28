@@ -5,6 +5,9 @@ import Slide from "./component/slide";
 import KigaliSection from './component/kigaliSection';
 import KigaliA from './component/kigaliA';
 import KigaliNewsSection from "./component/kigaliNewsCard";
+import AppDownlod from "./component/AppDawnlod";
+import Blog from "./component/Blog";
+import Hottelcheck from "./component/Hottelcheck";
 
 function App() {
   return (
@@ -14,7 +17,11 @@ function App() {
       <Slide />
       <KigaliSection />
       <KigaliA />
-      <KigaliNewsSection />  
+      <KigaliNewsSection />
+      <AppDownlod /> 
+      <Blog />
+      <Hottelcheck />
+
     </>
   );
 }

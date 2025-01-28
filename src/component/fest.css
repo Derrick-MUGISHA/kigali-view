@@ -1,0 +1,73 @@
+/* General Styling */
+.hotel-check-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 20px;
+  }
+  
+  .events-section {
+    width: 48%; /* Each section takes up 48% of the width */
+  }
+  
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .events-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .event-list-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-date {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #333; /* Black background for the date */
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .event-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .event-location {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  .view-all-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background-color: #2ecc71;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .view-all-btn:hover {
+    background-color: #27ae60;
+  }
+  

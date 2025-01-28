@@ -5,11 +5,11 @@ import { faFacebookF, faInstagram, faTwitter, faTiktok, faLinkedinIn, faYoutube 
 import './Navbar.css';
 
 const Navbar = () => {
-    const [menuOpen, setMenuOpen] = useState(false); // State for mobile menu
-    const [isSticky, setIsSticky] = useState(false); // State for sticky navbar
+    const [menuOpen, setMenuOpen] = useState(false);    
+    const [isSticky, setIsSticky] = useState(false); 
 
     const toggleMobileMenu = () => {
-        setMenuOpen(!menuOpen); // Toggle the mobile menu
+        setMenuOpen(!menuOpen); 
     };
 
     const handleScroll = () => {

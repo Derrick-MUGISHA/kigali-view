@@ -1,0 +1,78 @@
+/* Ensure the container takes up full width and height */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Make sure the container takes the full height of the viewport */
+    padding: 0;
+    margin: 0;
+}
+
+/* Set the slide container to horizontally align all slides */
+.slide {
+    display: flex; /* Align slides horizontally */
+    width: 100%; /* Take full width */
+    justify-content: space-around; /* Space slides out evenly */
+}
+
+/* Styling each individual slide */
+.slide-1, .slide-2, .slide-3 {
+    width: 30%; /* Each slide takes up 30% of the available width */
+    position: relative; /* To position the text and image correctly */
+    display: flex; /* Flexbox to align content */
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Ensure space between image and text */
+    overflow: hidden; /* Hide anything overflowing the container */
+    transition: all 0.3s ease-in-out; /* Smooth transition effect when hovering */
+}
+
+/* Style the image in each slide */
+.slide-1 img, .slide-2 img, .slide-3 img {
+    width: 50%; /* Make image take up 50% of the slide's width */
+    height: auto;
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    transition: filter 0.3s ease; /* Smooth transition when hovering */
+}
+
+/* Add the hover effect for the grayscale (black and white) image */
+.slide-1:hover img,
+.slide-2:hover img,
+.slide-3:hover img {
+    filter: grayscale(100%); /* Turn image black and white on hover */
+}
+
+/* Text styles inside each slide */
+.slide-1 h1, .slide-2 h1, .slide-3 h1,
+.slide-1 p, .slide-2 p, .slide-3 p {
+    color: white; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+    text-align: left; /* Align text to the left */
+    z-index: 1; /* Ensure text is above the image */
+    margin: 0;
+}
+
+/* Position the text on the left side and make it responsive */
+.slide-1 h1, .slide-2 h1, .slide-3 h1 {
+    font-size: 2rem;
+    margin-bottom: 10px; /* Space between header and paragraph */
+}
+
+.slide-1 p, .slide-2 p, .slide-3 p {
+    font-size: 1.2rem;
+}
+
+/* Underline the text when hovering over the slide */
+.slide-1:hover h1, .slide-1:hover p,
+.slide-2:hover h1, .slide-2:hover p,
+.slide-3:hover h1, .slide-3:hover p {
+    text-decoration: underline; /* Underline text on hover */
+}
+
+/* Ensure text is positioned properly to the left and not overlapping */
+.slide-1 .text, .slide-2 .text, .slide-3 .text {
+    display: flex;
+    flex-direction: column; /* Stack header and paragraph vertically */
+    justify-content: center; /* Vertically center the text */
+    padding-left: 10%; /* Add some padding to the left */
+    z-index: 2;
+}

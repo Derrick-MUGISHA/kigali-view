@@ -136,7 +136,7 @@
     background-color: black;
     font-size: x-large;
     position: relative; /* For sticky effect */
-    z-index: 1000;
+    z-index: 10;
     transition: top 0.3s ease-in-out;
 }
 

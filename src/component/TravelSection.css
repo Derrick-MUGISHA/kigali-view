@@ -1,0 +1,35 @@
+.travel-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .travel-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: text-decoration 0.3s ease; /* Smooth underline transition */
+  }
+  
+  .travel-heading:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .image-container {
+    display: flex;
+    gap: 20px; /* Space between images */
+  }
+  
+  .travel-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+  }
+  
+  .travel-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  

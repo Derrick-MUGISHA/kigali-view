@@ -9,6 +9,8 @@ import Blog from "./component/Blog";
 import Hottelcheck from "./component/Hottelcheck";
 import Fest from "./component/fest";
 import Market from "./component/Market";
+import Shorts from "./component/shorts";
+import TravelSection from './component/TravelSection';
 
 function App() {
   return (
@@ -24,7 +26,8 @@ function App() {
       <Hottelcheck />
       <Fest />
       <Market />
-
+      <Shorts />
+      <TravelSection />
     </>
   );
 }

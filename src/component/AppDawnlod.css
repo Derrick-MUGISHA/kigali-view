@@ -53,3 +53,93 @@
     height: auto;
     border-radius: 8px;
 }
+
+/* Media Queries for Responsiveness */
+
+/* Small screens (Mobile phones) */
+@media (max-width: 600px) {
+    .rewards-section {
+        flex-direction: column; /* Stack content and image vertically */
+        gap: 15px; /* Reduce gap between content */
+        padding: 20px 10px; /* Adjust padding for mobile */
+    }
+
+    .text-content {
+        max-width: 100%; /* Ensure content takes full width on mobile */
+        align-items: center; /* Center the content */
+        text-align: center; /* Center the text */
+    }
+
+    .section-heading {
+        font-size: 1.6rem; /* Smaller font size for heading */
+    }
+
+    .description-text p {
+        font-size: 1rem; /* Smaller font size for paragraph */
+    }
+
+    .description-text span {
+        font-size: 1rem; /* Smaller font size for span */
+    }
+
+    .video-container {
+        max-width: 100%; /* Video container takes full width on mobile */
+    }
+}
+
+/* Medium screens (Tablets) */
+@media (max-width: 900px) {
+    .rewards-section {
+        flex-direction: column; /* Stack content and image vertically */
+        gap: 20px; /* Standard gap between content */
+    }
+
+    .text-content {
+        max-width: 100%; /* Ensure content takes full width on tablets */
+        align-items: center; /* Center the content */
+    }
+
+    .section-heading {
+        font-size: 1.8rem; /* Slightly smaller heading for tablets */
+    }
+
+    .description-text p {
+        font-size: 1.05rem; /* Slightly smaller font size for paragraph */
+    }
+
+    .description-text span {
+        font-size: 1.05rem; /* Slightly smaller font size for span */
+    }
+
+    .video-container {
+        max-width: 100%; /* Video container takes full width on tablet */
+    }
+}
+
+/* Larger screens (Desktops) */
+@media (min-width: 901px) {
+    .rewards-section {
+        flex-direction: row; /* Keep content and image side by side */
+        gap: 20px; /* Standard gap between content */
+    }
+
+    .text-content {
+        max-width: 55%; /* Default content width */
+    }
+
+    .section-heading {
+        font-size: 2rem; /* Default heading size */
+    }
+
+    .description-text p {
+        font-size: 1.1rem; /* Default paragraph size */
+    }
+
+    .description-text span {
+        font-size: 1.1rem; /* Default span size */
+    }
+
+    .video-container {
+        max-width: 45%; /* Default video container width */
+    }
+}

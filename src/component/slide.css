@@ -1,4 +1,3 @@
-
 .container {
     width: 100vw; /* Full viewport width */
     margin: 0; /* Remove default margin */
@@ -8,9 +7,9 @@
 
 .slide {
     width: 100%; /* Full width */
-    height: 30vh; /* Full viewport height */
+    height: 40vh; /* Full viewport height */
     display: flex;
-    align-items: right; 
+    align-items: center; /* Center vertically */
     justify-content: space-between;
     transition: transform 0.5s ease-in-out; 
 }
@@ -27,11 +26,8 @@
 /* Style the image in each slide */
 .slide-1 img, .slide-2 img, .slide-3 img {
     width: 50%;
-    /* height: auto; */
-    /* object-fit: cover;  */
     transition: filter 0.3s ease; 
 }
-
 
 .slide-1:hover img,
 .slide-2:hover img,
@@ -71,4 +67,68 @@
     flex-direction: column; /* Stack header and paragraph vertically */
     justify-content: left;
     width: 50%;
+}
+
+/* Media Queries for responsive behavior */
+
+/* Tablet screens */
+@media (max-width: 768px) {
+    .slide {
+        height: 40vh; /* Increase slide height for tablets */
+    }
+
+    .slide-1, .slide-2, .slide-3 {
+        width: 45%; /* Reduce width of each slide to fit on smaller screens */
+    }
+
+    .slide-1 img, .slide-2 img, .slide-3 img {
+        width: 40%; /* Reduce image width */
+    }
+
+    .slide-1 h1, .slide-2 h1, .slide-3 h1 {
+        font-size: 1.8rem; /* Adjust font size for tablets */
+    }
+
+    .slide-1 p, .slide-2 p, .slide-3 p {
+        font-size: 1rem; /* Adjust font size for tablets */
+    }
+
+    .slide-1 .text, .slide-2 .text, .slide-3 .text {
+        width: 60%; /* Adjust text width */
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 500px) {
+    .slide {
+        height: auto; /* Let slide height adjust based on content */
+        flex-direction: column; /* Stack slides vertically */
+        align-items: center; /* Center slides horizontally */
+    }
+
+    .slide-1, .slide-2, .slide-3 {
+        width: 100%; /* Full width of the screen */
+        flex-direction: column; /* Stack items vertically for mobile */
+        align-items: center; /* Center all items in the slide */
+        justify-content: center; /* Center items inside the slide */
+    }
+
+    .slide-1 img, .slide-2 img, .slide-3 img {
+        width: 80%; /* Image takes up more width in mobile view */
+    }
+
+    .slide-1 h1, .slide-2 h1, .slide-3 h1 {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+        text-align: center; /* Center align text on mobile */
+    }
+
+    .slide-1 p, .slide-2 p, .slide-3 p {
+        font-size: 1rem; /* Adjust font size for mobile */
+        text-align: center; /* Center text for better readability */
+    }
+
+    .slide-1 .text, .slide-2 .text, .slide-3 .text {
+        width: 100%; /* Full width for text */
+        align-items: center; /* Center text block */
+    }
 }

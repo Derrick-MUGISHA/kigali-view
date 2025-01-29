@@ -39,3 +39,54 @@
     background-color: #f1f1f1; /* Change the background color when hovering */
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow for effect */
 }
+
+/* Media Queries for responsive behavior */
+
+/* Tablet screens */
+@media (max-width: 768px) {
+    .columbus-section {
+        padding: 30px 15px; /* Adjust padding for tablets */
+    }
+
+    .columbus-title {
+        font-size: 2rem; /* Slightly smaller title font size for tablets */
+        margin-bottom: 15px; /* Adjust spacing below title */
+    }
+
+    .columbus-paragraph,
+    .columbus-description {
+        font-size: 1.1rem; /* Slightly smaller text for better readability */
+        margin-bottom: 15px; /* Reduce margin between paragraphs */
+        max-width: 90%; /* Increase width on smaller screens */
+    }
+
+    .columbus-cta {
+        font-size: 1.2rem; /* Smaller call-to-action font size */
+        margin-top: 20px; /* Adjust space above CTA */
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    .columbus-section {
+        padding: 20px 10px; /* Further reduce padding for mobile */
+    }
+
+    .columbus-title {
+        font-size: 1.6rem; /* Smaller title font for mobile */
+        margin-bottom: 10px; /* Adjust space below title */
+    }
+
+    .columbus-paragraph,
+    .columbus-description {
+        font-size: 1rem; /* Smaller text for mobile */
+        line-height: 1.6; /* Adjust line height for mobile */
+        margin-bottom: 10px; /* Reduce margin between paragraphs */
+        max-width: 100%; /* Allow text block to take full width */
+    }
+
+    .columbus-cta {
+        font-size: 1.1rem; /* Smaller CTA font size */
+        margin-top: 15px; /* Adjust space above CTA */
+    }
+}

@@ -1,125 +1,111 @@
-/* HotelBooking.css */
-
-/* Overall container for the booking form */
-.hotel-booking-container {
-  padding: 40px;
-  border-radius: 8px;
+.hotel-search-container {
   max-width: 600px;
-  margin: 0 auto;
-  font-family: 'Arial', sans-serif;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Title and subtitle */
-.hotel-booking-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 10px;
+.hotel-search-header {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.hotel-booking-subtitle {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 30px;
-  text-align: center;
+.hotel-search-header h2 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
 }
 
-/* Booking form container */
-.booking-form {
+.subtitle {
+  color: #4a5568;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.date-inputs {
   display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "check-in check-out"
-    "adults children"
-    "submit submit";
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
-.booking-input, .booking-select {
-  width: 100%;
-  padding: 12px;
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-size: 0.875rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.input-group input {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
   font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background-color: #fff;
-  transition: border 0.3s ease;
+  transition: border-color 0.2s;
 }
 
-.booking-input:focus, .booking-select:focus {
-  border-color: #007bff;
+.input-group input:focus {
   outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 1px #4299e1;
 }
 
-.booking-input[type="date"]::-webkit-calendar-picker-indicator {
-  background-color: #007bff;
+.search-button {
+  background: #4299e1;
   color: white;
-  padding: 3px;
-  border-radius: 50%;
-}
-
-.booking-select {
-  background-color: #f9f9f9;
-}
-
-.booking-button {
-  grid-column: span 2;
-  padding: 14px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 600;
+  padding: 1rem;
   border: none;
   border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s;
 }
 
-.booking-button:hover {
-  background-color: #0056b3;
+.search-button:hover {
+  background: #3182ce;
 }
 
-.booking-select option {
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 4px;
+.search-button:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
 }
 
-/* Responsive Design for Mobile Devices */
-@media (max-width: 768px) {
-  .hotel-booking-container {
-    padding: 20px;
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .hotel-search-container {
+    margin: 1rem;
+    padding: 1.5rem;
   }
 
-  .booking-form {
+  .date-inputs {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "check-in"
-      "check-out"
-      "adults"
-      "children"
-      "submit";
-  }
-
-  .booking-button {
-    width: 100%;
   }
 }
-
-/* Adding some custom styling to calendar icon */
-.booking-calendar-icon {
-  position: relative;
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  margin-right: 8px;
-}
-
-.booking-calendar-icon svg {
-  fill: #007bff;
-  width: 100%;
-  height: 100%;
-}
-

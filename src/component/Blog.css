@@ -1,3 +1,4 @@
+/* Basic Styling */
 .blog-section {
   text-align: center;
   margin: 40px 0;
@@ -18,6 +19,7 @@
   padding: 0 20px;
 }
 
+/* Card Styling */
 .card {
   background-color: #fff;
   border-radius: 10px;
@@ -70,6 +72,7 @@
   margin-left: 5px;
 }
 
+/* View More Button */
 .view-more-container {
   margin-top: 30px;
 }
@@ -87,4 +90,61 @@
 
 .view-more-button:hover {
   background-color: #0056b3;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  .cards-container {
+    justify-content: flex-start;
+  }
+  .card {
+    width: 220px;
+  }
+}
+
+@media (max-width: 992px) {
+  .cards-container {
+    justify-content: center;
+  }
+  .card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    justify-content: center;
+    padding: 0 10px;
+  }
+  .card {
+    width: 100%;
+  }
+  .blog-section h2 {
+    font-size: 24px;
+  }
+  .read-more {
+    font-size: 12px;
+  }
+  .view-more-button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-section h2 {
+    font-size: 20px;
+  }
+  .card h3 {
+    font-size: 16px;
+  }
+  .card p {
+    font-size: 12px;
+  }
+  .read-more {
+    font-size: 12px;
+  }
+  .view-more-button {
+    font-size: 14px;
+    width: 100%;
+  }
 }

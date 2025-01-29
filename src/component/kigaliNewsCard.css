@@ -105,3 +105,106 @@
 .see-more-button:hover {
     background-color: #d65f42;
 }
+
+/* Media Queries for Responsiveness */
+
+/* Small screens (Mobile phones) */
+@media (max-width: 600px) {
+    .columbus-news-header h2 {
+        font-size: 1.8rem; /* Smaller title for mobile */
+    }
+
+    .columbus-news-header h3 {
+        font-size: 1.2rem; /* Smaller subtitle for mobile */
+    }
+
+    .columbus-cards {
+        flex-direction: column; /* Stack the cards vertically */
+        gap: 10px; /* Reduce gap between cards */
+    }
+
+    .columbus-card {
+        width: 100%; /* Cards take full width */
+        height: 250px; /* Adjust height for mobile */
+    }
+
+    .columbus-card-text h4 {
+        font-size: 1rem; /* Smaller text size */
+    }
+
+    .columbus-card-text p {
+        font-size: 0.9rem; /* Smaller text size */
+    }
+
+    .see-more-button {
+        font-size: 0.9rem; /* Smaller button text */
+        padding: 8px 16px; /* Smaller padding */
+    }
+}
+
+/* Medium screens (Tablets) */
+@media (max-width: 900px) {
+    .columbus-news-header h2 {
+        font-size: 2rem; /* Slightly smaller title for tablets */
+    }
+
+    .columbus-news-header h3 {
+        font-size: 1.4rem; /* Adjust subtitle size */
+    }
+
+    .columbus-cards {
+        flex-direction: row; /* Display cards in a row */
+        justify-content: space-around; /* Space out cards evenly */
+    }
+
+    .columbus-card {
+        width: 45%; /* Cards take up 45% of the width */
+        height: 300px; /* Adjust height for tablet */
+    }
+
+    .columbus-card-text h4 {
+        font-size: 1.1rem; /* Adjust heading size */
+    }
+
+    .columbus-card-text p {
+        font-size: 0.95rem; /* Adjust paragraph size */
+    }
+
+    .see-more-button {
+        font-size: 1rem; /* Standard button text */
+    }
+}
+
+/* Larger screens (Desktops) */
+@media (min-width: 901px) {
+    .columbus-news-header h2 {
+        font-size: 2.5rem; /* Default title size */
+    }
+
+    .columbus-news-header h3 {
+        font-size: 1.5rem; /* Default subtitle size */
+    }
+
+    .columbus-cards {
+        flex-direction: row; /* Display cards side by side */
+        justify-content: space-evenly; /* Evenly space out cards */
+    }
+
+    .columbus-card {
+        width: 300px; /* Default width for desktop */
+        height: 350px; /* Default height */
+    }
+
+    .columbus-card-text h4 {
+        font-size: 1.2rem; /* Default heading size */
+    }
+
+    .columbus-card-text p {
+        font-size: 1rem; /* Default paragraph size */
+    }
+
+    .see-more-button {
+        font-size: 1rem; /* Standard button text */
+        padding: 10px 20px; /* Default padding */
+    }
+}

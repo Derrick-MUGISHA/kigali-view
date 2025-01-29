@@ -23,7 +23,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
-    border-bottom: 1px solid #374151;
+    /* border-bottom: 1px solid #374151; */
   }
   
   .logo {
@@ -48,11 +48,15 @@
   
   .top-nav-link:hover {
     color: #d1d5db;
+    /* text-decoration: underline; */
   }
   
   .social-icons {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
+    align-items: center;
+    font-size: larger;
+    margin-bottom: 1rem;
   }
   
   .social-icon {
@@ -64,7 +68,6 @@
   .actions-container {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
   }
   
   .favorites {
@@ -79,13 +82,13 @@
   
   /* Main Navigation */
   .main-nav {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
   }
   
   .main-nav-links {
     display: flex;
-    justify-content: space-between;
-    gap: 1.5rem;
+    justify-content: space-around;
+    /* gap: 1.5rem; */
   }
   
   .main-nav-link {

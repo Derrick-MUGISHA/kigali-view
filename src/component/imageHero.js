@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './imageHero.css'; // Make sure to create this CSS file
+import './imageHero.css';
 
 const ImageCarousel = () => {
   const images = [

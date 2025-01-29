@@ -2,74 +2,74 @@ import React, { useState } from 'react';
 import './Hottelcheck.css';
 
 const HotelSearch = () => {
-  const [checkInDate, setCheckInDate] = useState('');
-  const [checkOutDate, setCheckOutDate] = useState('');
+  const [checkIn, setCheckIn] = useState('');
+  const [checkOut, setCheckOut] = useState('');
   const [guests, setGuests] = useState(1);
-  const [isSearching, setIsSearching] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSearch = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSearching(true);
+    setLoading(true);
+    
     // Simulate API call
     setTimeout(() => {
-      setIsSearching(false);
-      alert(`Searching for ${guests} guests from ${checkInDate} to ${checkOutDate}`);
+      setLoading(false);
+      alert(`Searching for ${guests} guests from ${checkIn} to ${checkOut}`);
     }, 1500);
   };
 
   return (
     <div className="hotel-search-container">
-      <div className="hotel-search-header">
+      <div className="header-section">
         <h2>CHECK HOTEL RATES</h2>
-        <p className="subtitle">BOOK WITH EXPERIENCE COLUMBUS FOR EXCLUSIVE OFFERS!</p>
+        <p className="sub-header">BOOK WITH EXPERIENCE COLUMBUS FOR EXCLUSIVE OFFERS!</p>
       </div>
 
-      <form onSubmit={handleSearch} className="search-form">
-        <div className="date-inputs">
-          <div className="input-group">
-            <label htmlFor="check-in">Check-in</label>
-            <input
-              type="date"
-              id="check-in"
-              value={checkInDate}
-              onChange={(e) => setCheckInDate(e.target.value)}
-              min={new Date().toISOString().split('T')[0]}
-              required
-            />
-          </div>
-
-          <div className="input-group">
-            <label htmlFor="check-out">Check-out</label>
-            <input
-              type="date"
-              id="check-out"
-              value={checkOutDate}
-              onChange={(e) => setCheckOutDate(e.target.value)}
-              min={checkInDate || new Date().toISOString().split('T')[0]}
-              required
-            />
-          </div>
-        </div>
-
+      <form onSubmit={handleSubmit} className="search-form">
         <div className="input-group">
-          <label htmlFor="guests">Guests</label>
-          <input
-            type="number"
-            id="guests"
-            value={guests}
-            onChange={(e) => setGuests(Math.max(1, e.target.value))}
-            min="1"
-            max="10"
-            required
-          />
+          <div className="date-inputs">
+            <div className="input-field">
+              <label>Check-in</label>
+              <input
+                type="date"
+                value={checkIn}
+                onChange={(e) => setCheckIn(e.target.value)}
+                min={new Date().toISOString().split('T')[0]}
+                required
+              />
+            </div>
+
+            <div className="input-field">
+              <label>Check-out</label>
+              <input
+                type="date"
+                value={checkOut}
+                onChange={(e) => setCheckOut(e.target.value)}
+                min={checkIn || new Date().toISOString().split('T')[0]}
+                required
+              />
+            </div>
+          </div>
+
+          <div className="input-field">
+            <label>Guests</label>
+            <input
+              type="number"
+              value={guests}
+              onChange={(e) => setGuests(Math.max(1, e.target.value))}
+              min="1"
+              max="10"
+              required
+            />
+          </div>
         </div>
 
         <button 
           type="submit" 
-          className="search-button"
-          disabled={isSearching}
+          className="search-btn"
+          disabled={loading}
         >
-          {isSearching ? (
+          {loading ? (
             <div className="spinner"></div>
           ) : (
             'SEARCH'

@@ -2,25 +2,25 @@
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-.hotel-search-header {
+.header-section {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.hotel-search-header h2 {
+.header-section h2 {
   color: #2d3748;
-  margin-bottom: 0.5rem;
-  font-size: 1.8rem;
+  font-size: 24px;
+  margin-bottom: 8px;
 }
 
-.subtitle {
+.sub-header {
   color: #4a5568;
-  font-size: 0.9rem;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -30,55 +30,62 @@
   gap: 1.5rem;
 }
 
+.input-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
 .date-inputs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 
-.input-group {
+.input-field {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 8px;
 }
 
-.input-group label {
-  font-size: 0.875rem;
+.input-field label {
+  font-size: 14px;
   color: #4a5568;
   font-weight: 500;
 }
 
-.input-group input {
-  padding: 0.75rem;
+.input-field input {
+  padding: 12px;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
-  font-size: 1rem;
-  transition: border-color 0.2s;
+  font-size: 14px;
+  width: 100%;
 }
 
-.input-group input:focus {
+.input-field input:focus {
   outline: none;
   border-color: #4299e1;
   box-shadow: 0 0 0 1px #4299e1;
 }
 
-.search-button {
+.search-btn {
   background: #4299e1;
   color: white;
-  padding: 1rem;
+  padding: 14px;
   border: none;
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.3s ease;
+  width: 100%;
 }
 
-.search-button:hover {
+.search-btn:hover {
   background: #3182ce;
 }
 
-.search-button:disabled {
+.search-btn:disabled {
   background: #cbd5e0;
   cursor: not-allowed;
 }
@@ -89,7 +96,7 @@
   border: 3px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   border-top-color: #fff;
-  animation: spin 1s ease-in-out infinite;
+  animation: spin 1s linear infinite;
   margin: 0 auto;
 }
 
@@ -99,10 +106,87 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
+  .input-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .date-inputs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hotel-search-container {
+    margin: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .header-section h2 {
+    font-size: 22px;
+  }
+
+  .sub-header {
+    font-size: 12px;
+  }
+
+  .search-btn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .input-group {
+    grid-template-columns: 1fr;
+  }
+
+  .date-inputs {
+    grid-template-columns: 1fr;
+  }
+
   .hotel-search-container {
     margin: 1rem;
-    padding: 1.5rem;
+    padding: 1.2rem;
+  }
+
+  .header-section h2 {
+    font-size: 20px;
+  }
+
+  .sub-header {
+    font-size: 12px;
+  }
+
+  .search-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hotel-search-container {
+    margin: 0.8rem;
+    padding: 1rem;
+  }
+
+  .header-section h2 {
+    font-size: 18px;
+  }
+
+  .sub-header {
+    font-size: 12px;
+  }
+
+  .input-field input {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .search-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .input-group {
+    grid-template-columns: 1fr;
   }
 
   .date-inputs {

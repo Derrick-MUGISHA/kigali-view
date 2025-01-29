@@ -1,133 +1,138 @@
+/* General Styles */
 .columbus-snapshots {
-    text-align: center;
-    padding: 20px;
-  }
-  
+  text-align: center;
+  padding: 20px;
+}
+
+.image-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dynamic grid layout */
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.image-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-card:hover img {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay */
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.image-card:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.overlay-text {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Read More Button */
+.read-more-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
   .image-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Adjust for medium screens */
+    gap: 15px;
   }
-  
+
   .image-card {
-    position: relative;
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    height: 220px; /* Adjust height for medium screens */
   }
-  
-  .image-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .image-card:hover img {
-    transform: scale(1.1); /* Zoom effect on hover */
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black overlay */
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.3s ease;
-  }
-  
-  .image-card:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
-  }
-  
+
   .overlay-text {
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
+    font-size: 16px; /* Adjust font size */
   }
-  .columbus-snapshots {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .image-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-  }
-  
-  .image-card {
-    position: relative;
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-  }
-  
-  .image-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .image-card:hover img {
-    transform: scale(1.1); /* Zoom effect on hover */
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black overlay */
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.3s ease;
-  }
-  
-  .image-card:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
-  }
-  
-  .overlay-text {
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-  }
-  
+
   .read-more-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+    font-size: 15px;
+    padding: 8px 16px;
   }
-  
-  .read-more-btn:hover {
-    background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+  .image-cards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller cards on tablet */
+    gap: 12px;
   }
-  
+
+  .image-card {
+    height: 200px; /* Adjust height for smaller devices */
+  }
+
+  .overlay-text {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .read-more-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image-cards {
+    grid-template-columns: 1fr; /* Stack cards on mobile */
+    gap: 10px;
+  }
+
+  .image-card {
+    height: 180px; /* Adjust card height for mobile */
+  }
+
+  .overlay-text {
+    font-size: 12px; /* Smaller text for mobile */
+  }
+
+  .read-more-btn {
+    font-size: 14px;
+    padding: 8px 14px; /* Adjust padding for mobile */
+  }
+}

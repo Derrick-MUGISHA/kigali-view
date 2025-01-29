@@ -1,4 +1,4 @@
-/* styles.css */
+/* Base styles (mobile-first) */
 .navbar {
     width: 100%;
     background-color: black;
@@ -7,19 +7,22 @@
   }
   
   .container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
+    padding: 0 1rem;
   }
   
   .top-navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 0;
+    flex-wrap: wrap;
   }
   
   .logo {
     flex-shrink: 0;
+    margin-right: auto;
   }
   
   .logo img {
@@ -27,12 +30,7 @@
   }
   
   .desktop-menu {
-    display: none;
-  }
-  
-  .desktop-menu a {
-    font-size: 0.875rem;
-    margin-right: 1.5rem;
+    display: none; /* Hidden on mobile by default */
   }
   
   .utility-nav {
@@ -42,7 +40,7 @@
   }
   
   .social-icons {
-    display: none;
+    display: flex;
     gap: 0.75rem;
   }
   
@@ -58,6 +56,7 @@
     background: none;
     border: none;
     color: white;
+    display: block;
   }
   
   .bottom-navigation {
@@ -67,8 +66,9 @@
   
   .main-menu {
     display: flex;
-    gap: 2rem;
-    padding: 0.75rem 1rem;
+    gap: 1.5rem;
+    padding: 0.75rem 0;
+    justify-content: center;
   }
   
   .main-menu a {
@@ -111,7 +111,6 @@
     padding-bottom: 1rem;
   }
   
-  /* Hover states */
   a {
     color: white;
     text-decoration: none;
@@ -122,25 +121,64 @@
     color: #D1D5DB;
   }
   
-  /* Media queries */
+  /* Larger Screens */
   @media (min-width: 768px) {
     .desktop-menu {
       display: flex;
     }
-    
+  
     .social-icons {
       display: flex;
     }
-    
+  
     .bottom-navigation {
       display: block;
     }
-    
+  
     .menu-button {
       display: none;
     }
-    
+  
     .mobile-menu {
       display: none !important;
     }
+  
+    /* Main menu alignment on large screens */
+    .main-menu {
+      justify-content: flex-start;
+    }
   }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 0.5rem 1rem; /* Adjust padding for small screens */
+    }
+  
+    .logo img {
+      height: 1.5rem; /* Smaller logo on mobile */
+    }
+  
+    .desktop-menu a {
+      font-size: 0.875rem; /* Adjust text size for small screens */
+    }
+  
+    .wishlist, .search, .menu-button {
+      font-size: 1.25rem;
+      padding: 0.25rem;
+    }
+  
+    .mobile-menu-content {
+      padding: 1rem 0.5rem; /* Adjust padding */
+    }
+  
+    .mobile-social-icons {
+      gap: 0.5rem; /* Reduce gap */
+      flex-wrap: wrap;
+    }
+  
+    .mobile-menu-section a {
+      padding: 0.5rem 1rem;
+    }
+  }
+  
+  

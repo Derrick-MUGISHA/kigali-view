@@ -8,10 +8,10 @@ const TravelSection = () => {
             <div className="delta-skyMiles relative flex-1 p-8 flex flex-col justify-center">
                 <div className="max-w-md">
                     <h2 className="heading text-2xl font-semibold mb-4">
-                        Join the Delta SkyMiles® Program for free
+                        Join the RWANDA AIR® Travel Agencies
                     </h2>
                     <p className="subheading text-lg mb-6">
-                        to earn miles toward travel, upgrades and more. Rules apply.
+                        Earn miles toward travel, upgrades, and more. Rules apply.
                     </p>
                     <a
                         href="#join"

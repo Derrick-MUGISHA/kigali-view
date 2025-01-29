@@ -9,12 +9,24 @@
   position: relative;
 }
 
+.footer::before {
+  content: ''; /* Empty content to create the overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(116, 193, 144, 0.3); /* Green color with 30% opacity */
+  z-index: 1; /* Ensure the overlay is above the image */
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  z-index: 2; /* Make sure content is above the overlay */
 }
 
 .footer-grid {

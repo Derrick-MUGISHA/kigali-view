@@ -1,134 +1,165 @@
-.container {
-    width: 100vw; /* Full viewport width */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    overflow: hidden; 
-}
-
-.slide {
-    width: 100%; /* Full width */
-    height: 40vh; /* Full viewport height */
+.promotional-slider {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 1rem; /* Adding some padding for better spacing */
+  }
+  
+  .slider-container {
     display: flex;
-    align-items: center; /* Center vertically */
+    flex-direction: row;
+    gap: 0.1rem;
+    width: 100%;
+    flex-wrap: wrap; /* Ensure the items wrap on smaller screens */
+  }
+  
+  .slide-container {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* border-radius: 0.5rem; */
+    overflow: hidden;
+    flex: 1;
+    min-width: 380px; /* Ensure it's not too small on small screens */
+  }
+  
+  .slide-container:hover {
+    flex: 1.5;
+  }
+  
+  /* Image container settings */
+  .image-container {
+    position: relative;
+    height: 18rem;
+  }
+  
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  
+  /* Overlay for darkening effect */
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+  }
+  
+  /* Color change on hover */
+  .slide-container:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Content positioning and styling */
+  .content {
+    position: absolute;
+    inset: 0;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.5s ease-in-out; 
-}
-
-/* Styling each individual slide */
-.slide-1, .slide-2, .slide-3 {
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Style the image in each slide */
-.slide-1 img, .slide-2 img, .slide-3 img {
-    width: 50%;
-    transition: filter 0.3s ease; 
-}
-
-.slide-1:hover img,
-.slide-2:hover img,
-.slide-3:hover img {
-    filter: grayscale(100%);
-}
-
-/* Text styles inside each slide */
-.slide-1 h1, .slide-2 h1, .slide-3 h1,
-.slide-1 p, .slide-2 p, .slide-3 p {
-    color: black; 
-    text-align: left;
-    z-index: 1;
-    margin: 0;
-}
-
-/* Position the text on the left side and make it responsive */
-.slide-1 h1, .slide-2 h1, .slide-3 h1 {
-    font-size: 2rem;
-    margin-bottom: 10px; /* Space between header and paragraph */
-}
-
-.slide-1 p, .slide-2 p, .slide-3 p {
-    font-size: 1.2rem;
-}
-
-/* Underline the text when hovering over the slide */
-.slide-1:hover h1, 
-.slide-2:hover h1, 
-.slide-3:hover h1 {
-    text-decoration: underline; /* Underline text on hover */
-}
-
-/* Ensure text is positioned properly to the left and not overlapping */
-.slide-1 .text, .slide-2 .text, .slide-3 .text {
-    display: flex;
-    flex-direction: column; /* Stack header and paragraph vertically */
-    justify-content: left;
-    width: 50%;
-}
-
-/* Media Queries for responsive behavior */
-
-/* Tablet screens */
-@media (max-width: 768px) {
-    .slide {
-        height: 40vh; /* Increase slide height for tablets */
+  }
+  
+  .subtext {
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  
+  .arrow-indicator {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 1.875rem;
+  }
+  
+  .slide-container:hover .arrow-indicator {
+    opacity: 1;
+  }
+  
+  /* Color variants for each slide */
+  .text-cyan {
+    color: #22d3ee;
+  }
+  
+  .text-green {
+    color: #4ade80;
+  }
+  
+  .text-yellow {
+    color: #facc15;
+  }
+  
+  /* Hover color changes for the slide */
+  .slide-container:hover .text-cyan {
+    color: #0ea5e9;
+  }
+  
+  .slide-container:hover .text-green {
+    color: #22c55e;
+  }
+  
+  .slide-container:hover .text-yellow {
+    color: #eab308;
+  }
+  
+  /* Additional image section with hover effect */
+  .additional-image .overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .additional-image:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Responsive Styles for Mobile and Tablet Screens */
+  @media (max-width: 1024px) {
+    .slider-container {
+      gap: 0.5rem; /* Smaller gap for tablet screens */
     }
-
-    .slide-1, .slide-2, .slide-3 {
-        width: 45%; /* Reduce width of each slide to fit on smaller screens */
+  
+    .slide-container {
+      min-width: 45%; /* Larger minimum width on tablets */
     }
-
-    .slide-1 img, .slide-2 img, .slide-3 img {
-        width: 40%; /* Reduce image width */
+  }
+  
+  @media (max-width: 768px) {
+    .slider-container {
+      flex-direction: column; /* Stack the slides vertically on small screens */
+      gap: 1.5rem;
     }
-
-    .slide-1 h1, .slide-2 h1, .slide-3 h1 {
-        font-size: 1.8rem; /* Adjust font size for tablets */
+  
+    .slide-container {
+      min-width: 100%; /* Full width for each slide */
     }
-
-    .slide-1 p, .slide-2 p, .slide-3 p {
-        font-size: 1rem; /* Adjust font size for tablets */
+  
+    .image-container {
+      height: 14rem; /* Adjust image height for mobile screens */
     }
-
-    .slide-1 .text, .slide-2 .text, .slide-3 .text {
-        width: 60%; /* Adjust text width */
+  
+    .content {
+      padding: 1rem; /* Smaller padding for mobile screens */
     }
-}
-
-/* Mobile screens */
-@media (max-width: 500px) {
-    .slide {
-        height: auto; /* Let slide height adjust based on content */
-        flex-direction: column; /* Stack slides vertically */
-        align-items: center; /* Center slides horizontally */
+  
+    .title {
+      font-size: 1.25rem; /* Adjust font size for mobile */
     }
-
-    .slide-1, .slide-2, .slide-3 {
-        width: 100%; /* Full width of the screen */
-        flex-direction: column; /* Stack items vertically for mobile */
-        align-items: center; /* Center all items in the slide */
-        justify-content: center; /* Center items inside the slide */
+  
+    .subtext {
+      font-size: 0.75rem; /* Smaller subtext on mobile */
     }
-
-    .slide-1 img, .slide-2 img, .slide-3 img {
-        width: 80%; /* Image takes up more width in mobile view */
+  
+    .arrow-indicator {
+      font-size: 1.5rem; /* Adjust arrow size */
     }
-
-    .slide-1 h1, .slide-2 h1, .slide-3 h1 {
-        font-size: 1.5rem; /* Adjust font size for mobile */
-        text-align: center; /* Center align text on mobile */
-    }
-
-    .slide-1 p, .slide-2 p, .slide-3 p {
-        font-size: 1rem; /* Adjust font size for mobile */
-        text-align: center; /* Center text for better readability */
-    }
-
-    .slide-1 .text, .slide-2 .text, .slide-3 .text {
-        width: 100%; /* Full width for text */
-        align-items: center; /* Center text block */
-    }
-}
+  }
+  

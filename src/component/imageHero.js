@@ -8,15 +8,15 @@ const ImageCarousel = () => {
       text: 'Experience Kigali from Every Angle'
     },
     {
-      src: 'https://media.graphassets.com/resize=width:1600/auto_image/quality=value:85/compress/rubHJ1CvSDaQ6mwnejxO',
+      src: 'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/10/0a/60/3c.jpg',
       text: 'Where Kigali Comes to Life'
     },
     {
-      src: 'https://www.kigalicity.gov.rw/index.php?eID=dumpFile&t=f&f=36793&token=79d4d4744da3652de068e5d93528e4632b3c0446',
+      src: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/1b/74/55/caption.jpg?w=1000&h=-1&s=1',
       text: 'Your Ultimate Kigali View'
     },
     {
-      src: 'https://www.kigalicity.gov.rw/index.php?eID=dumpFile&t=f&f=36823&token=ad602e29eea48d1ae25eefe83052662cbbe62ec8',
+      src: 'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/10/19/08/99.jpg',
       text: 'Discover Kigali s Hidden Gems'
     },
   ];

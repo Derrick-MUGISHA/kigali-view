@@ -7,31 +7,31 @@ const Marketplace = () => {
       title: "1-Day Kigali City Tour Pass",
       description:
         "Explore the vibrant city of Kigali with a 24-hour pass to visit its top attractions, including the Kigali Genocide Memorial, local markets, and cultural landmarks.",
-      image: "https://via.placeholder.com/150",
+      image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/b0/fa/2a/gisozi-genocide-memorial.jpg?w=1000&h=-1&s=1",
     },
     {
       title: "Kigali Coffee Experience Trail",
       description:
         "Discover Rwanda's world-renowned coffee culture. Visit local coffee shops and plantations to learn about the process from bean to cup.",
-      image: "https://via.placeholder.com/150",
+      image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0b/22/20/01.jpg",
     },
     {
       title: "Kigali Art and Craft Trail",
       description:
         "Immerse yourself in Kigali's thriving art scene. Visit galleries, craft markets, and workshops to see and purchase unique handmade items.",
-      image: "https://via.placeholder.com/150",
+      image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/41/34/12/ivuka-arts-centre.jpg?w=900&h=500&s=1",
     },
     {
       title: "Kigali Foodie Trail",
       description:
         "Taste your way through Kigali's culinary delights. Enjoy traditional Rwandan dishes and modern fusion cuisine at the city's best restaurants.",
-      image: "https://via.placeholder.com/150",
+      image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0f/e3/94/25.jpg",
     },
     {
       title: "Kigali Nature and Wildlife Trail",
       description:
         "Experience Kigali's natural beauty. Visit nearby parks, lakes, and wildlife reserves to see Rwanda's stunning landscapes and animals.",
-      image: "https://via.placeholder.com/150",
+      image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/31/88/df/caption.jpg?w=1000&h=-1&s=1",
     },
   ];
 

@@ -1,99 +1,120 @@
-// Navbar.jsx
 import React, { useState } from 'react';
-import { Search, Heart, Menu, X } from 'lucide-react';
+import { 
+  Facebook, Instagram, Twitter, Youtube, Linkedin, 
+  Search, Heart, Menu, X 
+} from 'lucide-react';
 import './Navbar.css';
 
-const Navbar = () => {
-    const [wishlistCount, setWishlistCount] = useState(0);
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-    const toggleMenu = () => {
-      setIsMenuOpen(!isMenuOpen);
-    };
-  
-    return (
-      <nav className="navbar">
-        <div className="container">
-          <div className="top-navigation">
-            <div className="logo">
-              <img 
-                src="/api/placeholder/200/50" 
-                alt="Experience Columbus Logo" 
-              />
+const NavigationBar = () => {
+  const mainNavItems = [
+    'EVENTS',
+    'THINGS TO DO',
+    'RESTAURANTS',
+    'HOTELS',
+    'NEIGHBORHOODS',
+    'EXPLORE COLUMBUS'
+  ];
+
+  const topNavItems = [
+    'Meeting Planners',
+    'Tour & Reunion Planners',
+    'Partners',
+    'Blog',
+    'Yes, Columbus'
+  ];
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => setIsMenuOpen(false);
+
+  return (
+    <nav className="navbar">
+      <div className="nav-container">
+        {/* Top Navigation */}
+        <div className="top-nav">
+          <div className="logo">EXPERIENCE COLUMBUS</div>
+          
+          {/* Desktop Top Navigation */}
+          <div className="top-nav-right">
+            {topNavItems.map((item) => (
+              <a key={item} href="#" className="top-nav-link">
+                {item}
+              </a>
+            ))}
+            <div className="social-icons">
+              <Facebook className="social-icon" />
+              <Instagram className="social-icon" />
+              <Twitter className="social-icon" />
+              <Youtube className="social-icon" />
+              <Linkedin className="social-icon" />
             </div>
-  
-            <div className="desktop-menu">
-              <a href="#">Meeting Planners</a>
-              <a href="#">Tour & Reunion Planners</a>
-              <a href="#">Partners</a>
-              <a href="#">Blog</a>
-              <a href="#">Yes, Columbus</a>
-            </div>
-  
-            <div className="utility-nav">
-              <div className="social-icons">
-                <a href="#"><i className="fab fa-facebook"></i></a>
-                <a href="#"><i className="fab fa-instagram"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
-                <a href="#"><i className="fab fa-tiktok"></i></a>
-                <a href="#"><i className="fab fa-threads"></i></a>
-                <a href="#"><i className="fab fa-linkedin"></i></a>
-                <a href="#"><i className="fab fa-youtube"></i></a>
+            <div className="actions-container">
+              <div className="favorites">
+                <Heart className="social-icon" />
+                <span className="favorites-count">(0)</span>
               </div>
-              <div className="wishlist">
-                <Heart size={20} />
-                <span>({wishlistCount})</span>
-              </div>
-              <Search size={20} className="cursor-pointer" />
-              <button className="menu-button" onClick={toggleMenu}>
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
-            </div>
-          </div>
-  
-          <div className="bottom-navigation">
-            <div className="main-menu">
-              <a href="#">EVENTS</a>
-              <a href="#">THINGS TO DO</a>
-              <a href="#">RESTAURANTS</a>
-              <a href="#">HOTELS</a>
-              <a href="#">NEIGHBORHOODS</a>
-              <a href="#">EXPLORE COLUMBUS</a>
+              <Search className="social-icon" />
             </div>
           </div>
-  
-          <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
-            <div className="mobile-menu-content">
-              <div className="mobile-menu-section">
-                <a href="#">Meeting Planners</a>
-                <a href="#">Tour & Reunion Planners</a>
-                <a href="#">Partners</a>
-                <a href="#">Blog</a>
-                <a href="#">Yes, Columbus</a>
+
+          {/* Mobile Hamburger Menu */}
+          <div className="hamburger-menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X className="hamburger-icon" /> : <Menu className="hamburger-icon" />}
+          </div>
+        </div>
+
+        {/* Desktop Main Navigation */}
+        <div className="main-nav">
+          <div className="main-nav-links">
+            {mainNavItems.map((item) => (
+              <a key={item} href="#" className="main-nav-link">
+                {item}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile Menu Overlay */}
+        <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
+          <div className="mobile-menu-content">
+            <div className="mobile-menu-links">
+              {/* Main Navigation Items */}
+              {mainNavItems.map((item) => (
+                <a 
+                  key={item} 
+                  href="#" 
+                  className="mobile-nav-link"
+                  onClick={closeMenu}
+                >
+                  {item}
+                </a>
+              ))}
+
+              {/* Top Navigation Items */}
+              {topNavItems.map((item) => (
+                <a 
+                  key={item} 
+                  href="#" 
+                  className="mobile-nav-link mobile-top-link"
+                  onClick={closeMenu}
+                >
+                  {item}
+                </a>
+              ))}
+            </div>
+            
+            <div className="mobile-actions">
+              <div className="mobile-favorites">
+                <Heart className="social-icon" />
+                <span className="favorites-count">(0)</span>
               </div>
-              <div className="mobile-menu-section">
-                <a href="#">EVENTS</a>
-                <a href="#">THINGS TO DO</a>
-                <a href="#">RESTAURANTS</a>
-                <a href="#">HOTELS</a>
-                <a href="#">NEIGHBORHOODS</a>
-                <a href="#">EXPLORE COLUMBUS</a>
-              </div>
-              <div className="mobile-social-icons">
-                <a href="#"><i className="fab fa-facebook"></i></a>
-                <a href="#"><i className="fab fa-instagram"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
-                <a href="#"><i className="fab fa-tiktok"></i></a>
-                <a href="#"><i className="fab fa-threads"></i></a>
-                <a href="#"><i className="fab fa-linkedin"></i></a>
-                <a href="#"><i className="fab fa-youtube"></i></a>
-              </div>
+              <Search className="social-icon" />
             </div>
           </div>
         </div>
-      </nav>
-    );
-  };
-  
-  export default Navbar;
-  
+      </div>
+    </nav>
+  );
+};
+
+export default NavigationBar;

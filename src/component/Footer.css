@@ -1,5 +1,5 @@
 .footer {
-  background-image: url('https://eu-assets.simpleview-europe.com/acorntourism/imageresizer/?image=%2Fdmsimgs%2FC018_903304762.jpg&action=ProductDetailImage'); /* Provide your image path */
+  /* background-image: url('https://eu-assets.simpleview-europe.com/acorntourism/imageresizer/?image=%2Fdmsimgs%2FC018_903304762.jpg&action=ProductDetailImage'); */
   background-size: cover; /* Ensures the image covers the entire footer */
   background-position: center; /* Center the image */
   background-color: #1a202c; /* Fallback color */
@@ -7,17 +7,6 @@
   padding: 2.5rem 0;
   width: 100%;
   position: relative;
-}
-
-.footer::before {
-  content: ''; /* Empty content to create the overlay */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(116, 193, 144, 0.3); /* Green color with 30% opacity */
-  z-index: 1; /* Ensure the overlay is above the image */
 }
 
 .container {
@@ -121,12 +110,14 @@
   gap: 1rem;
   justify-content: flex-start;
   margin-top: 1rem;
+   cursor: pointer;
 }
 
 .social-icons a {
   color: white;
   font-size: 1.5rem;
   transition: color 0.3s ease;
+ 
 }
 
 .social-icons a:hover {

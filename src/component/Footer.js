@@ -1,7 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link
 import "./Footer.css";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
-
 const Footer = () => {
   return (
     <footer className="footer">
@@ -14,24 +14,37 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="#">Media</a></li>
-              <li><a href="#">Partnership</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="/media">Media</a></li> {/* Update with actual route */}
+              <li><a href="/partnership">Partnership</a></li> {/* Update with actual route */}
+              <li><a href="/about-us">About Us</a></li> {/* Update with actual route */}
+              <li><a href="/contact">Contact</a></li> {/* Update with actual route */}
             </ul>
           </div>
           <div className="footer-section">
             <h3>Contact Us</h3>
             <p>277 Kabuye St., Kigali, Rwanda<br />Kigali, Rwanda</p>
-            <p>+250 614 221 662 |+250 800 354 2657</p>
+            <p>
+              <a href="tel:+250614221662">+250 614 221 662</a> |
+              <a href="tel:+2508003542657">+250 800 354 2657</a>
+            </p>
           </div>
         </div>
         <div className="social-icons">
-          <a href="http://facebook.com/"><FaFacebook /></a>
-          <a href="https://x.com/__derr1ck__?t=P-KqVcqqOZeB5lJUN04PLQ&s=03"><FaTwitter /></a>
-          <a href="https://www.instagram.com/d.e.r.r.1.c.k?igsh=ZHYwZTg3M3Q2NDJs"><FaInstagram /></a>
-          <a href="https://www.linkedin.com/in/mugisha-derrick-479788332/"><FaLinkedin /></a>
-          <a href="#fgd"><FaYoutube /></a>
+          <a href="http://facebook.com/" target="_blank" rel="noopener noreferrer">
+            <FaFacebook />
+          </a>
+          <a href="https://x.com/__derr1ck__?t=P-KqVcqqOZeB5lJUN04PLQ&s=03" target="_blank" rel="noopener noreferrer">
+            <FaTwitter />
+          </a>
+          <a href="https://www.instagram.com/d.e.r.r.1.c.k?igsh=ZHYwZTg3M3Q2NDJs" target="_blank" rel="noopener noreferrer">
+            <FaInstagram />
+          </a>
+          <a href="https://www.linkedin.com/in/mugisha-derrick-479788332/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+            <FaYoutube />
+          </a>
         </div>
         <div className="language-selector">
           <select>
@@ -43,8 +56,8 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>&copy; 2025 All Rights Reserved.</p>
           <div className="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
+            <a href="/privacy-policy">Privacy Policy</a> {/* Update with actual URL */}
+            <a href="/terms-conditions">Terms & Conditions</a> {/* Update with actual URL */}
           </div>
         </div>
       </div>
@@ -53,4 +66,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

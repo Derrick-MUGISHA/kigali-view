@@ -8,13 +8,13 @@ const Footer = () => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-section">
-            <img src="logo-placeholder.png" alt="Kigali view" className="logo" />
+            <img src="https://i.postimg.cc/vmH8rtss/kigali-view-high-resolution-logo.png" alt="Kigali view" className="logo" />
             <p>A Top 10 Best Big City in the Africa<br />One of the Best Secured Cities in the World<br />One of the Friendliest Cities</p>
           </div>
           <div className="footer-section">
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="/media">Media</a></li> {/* Update with actual route */}
+              <li><a href="/media">Media</a></li> 
               <li><a href="/partnership">Partnership</a></li> {/* Update with actual route */}
               <li><a href="/about-us">About Us</a></li> {/* Update with actual route */}
               <li><a href="/contact">Contact</a></li> {/* Update with actual route */}
@@ -24,8 +24,8 @@ const Footer = () => {
             <h3>Contact Us</h3>
             <p>277 Kabuye St., Kigali, Rwanda<br />Kigali, Rwanda</p>
             <p>
-              <a href="tel:+250614221662">+250 614 221 662</a> |
-              <a href="tel:+2508003542657">+250 800 354 2657</a>
+              <p>+250 614 221 662</p> 
+                <p> +250 800 354 2657</p>
             </p>
           </div>
         </div>

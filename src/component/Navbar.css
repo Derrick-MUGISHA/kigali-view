@@ -27,9 +27,18 @@
   }
   
   .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #fff;
+    width: 150px;
+    height: auto; 
+    max-width: 100%;
+    /* margin: 10px 0; */
+    font-size: x-large;
+  }
+  .logo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-right: 1rem;
+    font-size: x-large;
   }
   
   /* Desktop Top Navigation */
@@ -158,6 +167,61 @@
     background-color: #444; /* Optional: adds a background on hover */
   }
   
+/* Main Navigation */
+.main-nav {
+  padding: 0.5rem 0;
+}
+
+.main-nav-links {
+  display: flex;
+  justify-content: space-around;
+  /* gap: 1.5rem; */
+}
+
+.nav-item {
+  position: relative; /* For positioning the dropdown */
+}
+
+.main-nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.main-nav-link:hover {
+  color: #d1d5db;
+}
+
+/* Dropdown styles */
+.dropdown {
+  display: none; /* Hide by default */
+  position: absolute;
+  top: 100%; /* Position below the main link */
+  left: 0;
+  background-color: #333;
+  width: 200px;
+  z-index: 1;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.nav-item:hover .dropdown {
+  display: block; /* Show dropdown on hover */
+}
+
+.dropdown-item {
+  padding: 0.75rem;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #444;
+}
 
 
   
@@ -270,6 +334,7 @@
     margin-top: 3rem;
   }
   
+  
   @media (max-width: 480px) {
     .mobile-nav-link {
       font-size: 1.1rem;
@@ -303,7 +368,7 @@
   
     .mobile-nav-link {
       font-size: 1.1rem;
-    }
+    } 
   }
   
   @media (max-width: 480px) {

@@ -21,7 +21,7 @@ const App = () => {
 
             {/* Right side: Video */}
             <div className="video-container">
-                <img src="your-video-url" alt="Video Thumbnail" />
+                <img src="https://i.postimg.cc/vmH8rtss/kigali-view-high-resolution-logo.png" alt="Video Thumbnail" />
             </div>
         </section>
     );

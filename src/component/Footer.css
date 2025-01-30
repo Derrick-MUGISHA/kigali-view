@@ -1,12 +1,13 @@
+/* Footer Base Styling */
 .footer {
-  /* background-image: url('https://eu-assets.simpleview-europe.com/acorntourism/imageresizer/?image=%2Fdmsimgs%2FC018_903304762.jpg&action=ProductDetailImage'); */
-  background-size: cover; /* Ensures the image covers the entire footer */
-  background-position: center; /* Center the image */
-  background-color: #1a202c; /* Fallback color */
+  background-size: cover; /* Ensure image covers the footer */
+  background-position: center;
+  background-color: #272626; /* Fallback background color */
   color: white;
   padding: 2.5rem 0;
   width: 100%;
   position: relative;
+  text-align: center;
 }
 
 .container {
@@ -15,9 +16,10 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  z-index: 2; /* Make sure content is above the overlay */
+  z-index: 2; /* Ensure content appears above background */
 }
 
+/* Footer Grid Layout */
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -27,10 +29,11 @@
 
 @media (min-width: 768px) {
   .footer-grid {
-      grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
+/* Footer Section Styling */
 .footer-section {
   display: flex;
   flex-direction: column;
@@ -43,37 +46,81 @@
   margin-bottom: 1rem;
 }
 
+.footer-section p {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
 .footer-section ul {
   list-style: none;
   padding: 0;
-  margin-bottom: 2rem;
-}
-.footer-section ul a {
-  font-size: 0.875rem;
-  line-height: 1.5;
-  font-weight: 400;
-  color: white;
-  text-decoration: none;
 }
 
-.footer-section ul li a {
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul a {
+  font-size: 0.875rem;
   color: white;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.footer-section ul li a:hover {
+.footer-section ul a:hover {
   color: #a0aec0;
 }
-.footer-section p {
-  margin-bottom: 1rem;
-}
+
+/* Image Styling */
 .footer-section img {
   width: 100%;
   max-width: 150px;
   margin-bottom: 1rem;
+  object-fit: cover;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+  opacity: 0.8;
+  filter: grayscale(100%);
 }
 
+.footer-section img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #a0aec0;
+}
+
+/* Language Selector */
+.language-selector {
+  margin-top: 1rem;
+  align-self: flex-end;
+}
+
+.language-selector select {
+  background: #2d3748;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Footer Bottom Styling */
 .footer-bottom {
   border-top: 1px solid #4a5568;
   padding-top: 1.5rem;
@@ -85,8 +132,8 @@
 
 @media (min-width: 768px) {
   .footer-bottom {
-      flex-direction: row;
-      justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -105,39 +152,7 @@
   color: #a0aec0;
 }
 
-.social-icons {
-  display: flex;
-  gap: 1rem;
-  justify-content: flex-start;
-  margin-top: 1rem;
-   cursor: pointer;
-}
-
-.social-icons a {
-  color: white;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
- 
-}
-
-.social-icons a:hover {
-  color: #a0aec0;
-}
-
-.language-selector {
-  margin-top: 1rem;
-  align-self: flex-end;
-}
-
-.language-selector select {
-  background: #2d3748;
-  color: white;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
+/* Ensuring Footer Stays Aligned and Responsive */
 .footer-layout {
   display: flex;
   flex-direction: column;
@@ -148,7 +163,8 @@
 
 @media (min-width: 768px) {
   .footer-layout {
-      flex-direction: row;
-      justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
+

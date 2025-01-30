@@ -58,7 +58,7 @@
   display: flex;
   align-items: center;
   margin-top: 15px;
-  color: #007bff;
+  color: #e86c4b;
   font-weight: bold;
   text-decoration: none;
   font-size: 14px;
@@ -78,7 +78,7 @@
 }
 
 .view-more-button {
-  background-color: #007bff;
+  background-color: #e86c4b;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -89,7 +89,8 @@
 }
 
 .view-more-button:hover {
-  background-color: #0056b3;
+  background-color: #792812;
+  color: #fcb5a1;
 }
 
 /* Media Queries for responsiveness */

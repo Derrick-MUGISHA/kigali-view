@@ -9,7 +9,7 @@ const ColumbusAwardsSection = () => {
         <div className="columbus-left">
           <div className="columbus-logo">
             <img
-              src="your-logo-url-here" // Replace with your logo URL
+              src="https://i.postimg.cc/vmH8rtss/kigali-view-high-resolution-logo.png" // Replace with your logo URL
               alt="Columbus Logo"
               className="logo-img"
             />

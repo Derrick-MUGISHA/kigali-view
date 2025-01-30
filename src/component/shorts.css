@@ -61,7 +61,7 @@
 
 /* Read More Button */
 .read-more-btn {
-  background-color: #007bff;
+  background-color: #e86c4b;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -73,7 +73,7 @@
 }
 
 .read-more-btn:hover {
-  background-color: #0056b3;
+  background-color: #d6502a;
 }
 
 /* Responsive Styles */

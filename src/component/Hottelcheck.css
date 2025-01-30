@@ -64,12 +64,12 @@
 
 .input-field input:focus {
   outline: none;
-  border-color: #4299e1;
+  border-color: #e86c4b;
   box-shadow: 0 0 0 1px #4299e1;
 }
 
 .search-btn {
-  background: #4299e1;
+  background: #e86c4b;
   color: white;
   padding: 14px;
   border: none;
@@ -82,7 +82,7 @@
 }
 
 .search-btn:hover {
-  background: #3182ce;
+  background: #dd532c;
 }
 
 .search-btn:disabled {

@@ -14,10 +14,10 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="/media">Media</a></li> 
-              <li><a href="/partnership">Partnership</a></li> {/* Update with actual route */}
-              <li><a href="/about-us">About Us</a></li> {/* Update with actual route */}
-              <li><a href="/contact">Contact</a></li> {/* Update with actual route */}
+              <li><a href="/media">Trending Places in Kigali / Events</a></li> 
+              <li><a href="/partnership">up calming games</a></li> {/* Update with actual route */}
+              <li><a href="/about-us">Five Stars Hotels in Rwanda</a></li> {/* Update with actual route */}
+              <li><a href="/contact">Best Restaurants in Kigali</a></li> {/* Update with actual route */}
             </ul>
           </div>
           <div className="footer-section">

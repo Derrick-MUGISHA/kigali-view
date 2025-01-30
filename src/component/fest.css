@@ -63,14 +63,14 @@
 
 .event-location {
   font-size: 16px;
-  color: #777;
+  color: #e86c4b;
 }
 
 .view-all-btn {
   display: block;
   margin: 20px auto;
   padding: 12px 25px;
-  background-color: #2ecc71;
+  background-color: #e86c4b;
   color: white;
   font-size: 16px;
   border: none;
@@ -81,7 +81,7 @@
 }
 
 .view-all-btn:hover {
-  background-color: #27ae60;
+  background-color: #c04f30;
 }
 
 /* Media Queries for Responsiveness */

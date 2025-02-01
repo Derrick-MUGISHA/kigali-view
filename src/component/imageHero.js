@@ -4,6 +4,10 @@ import './imageHero.css';
 const ImageCarousel = () => {
   const images = [
     {
+      src: 'https://static.vecteezy.com/system/resources/previews/034/899/406/non_2x/rwanda-heroes-day-illustration-on-february-1-with-rwandan-flag-and-soldier-memorial-who-struggled-in-national-holiday-cartoon-background-vector.jpg',
+      text: 'A Land of Heroes, Resilience, and Rich Culture.'
+    },
+    {
       src: 'https://d1bvpoagx8hqbg.cloudfront.net/originals/experience-kigali-rwanda-umulinga-dbb2e0c2fe1ca0f3860d92e3ddfe41c2.jpg',
       text: 'Experience Kigali from Every Angle'
     },

@@ -20,7 +20,13 @@ const PromotionalSlider = () => {
       subtext: "DOWNLOAD AND SAVE!",
       textColorClass: "text-yellow",
       image: "https://kinyarwanda.com/wp-content/uploads/2021/12/MG_3648-Edit-1-1024x683.jpg"
-    }
+    },
+    {
+      // title: "On this Heroes Day, we celebrate Rwanda’s past, present, and future",
+      // subtext: "FREE ATTRACTIONS TICKETS",
+      // textColorClass: "text-red",
+      image: "https://static.vecteezy.com/system/resources/previews/034/899/406/non_2x/rwanda-heroes-day-illustration-on-february-1-with-rwandan-flag-and-soldier-memorial-who-struggled-in-national-holiday-cartoon-background-vector.jpg"
+    },
   ];
 
   return (

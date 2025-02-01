@@ -100,6 +100,10 @@
     color: #facc15;
   }
   
+  .text-red {
+    color: rgb(66, 14, 237);
+  }
+  
   /* Hover color changes for the slide */
   .slide-container:hover .text-cyan {
     color: #0ea5e9;

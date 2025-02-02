@@ -33,7 +33,7 @@ const ImageCarousel = () => {
     }, 5000); // Change image every 5 seconds
 
     return () => clearInterval(interval); // Cleanup on component unmount
-  }, []);
+  }, [images.length]);
 
   return (
     <>

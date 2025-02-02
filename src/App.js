@@ -30,7 +30,6 @@ function App() {
       <Shorts />
       <TravelSection />
       <Footer />
-      
     </>
   );
 }

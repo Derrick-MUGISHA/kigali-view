@@ -12,7 +12,7 @@ const ColumbusNewsSection = () => {
       "title": "Nyandungu Eco-Tourism Park",
       "description": "A serene eco-park in Kigali offering walking trails, birdwatching, and a peaceful escape into nature.",
       "imageUrl": "https://www.ktpress.rw/wp-content/uploads/2022/07/Nyandungu-16.jpg",
-      "link": "https://www.visitrwanda.com/destinations/nyandungu-eco-tourism-park/"
+      "link": "./src/pages/kigaliNewsCard/NewCard.js"
     },
     {
       "title": "Kigali Genocide Memorial",
@@ -99,9 +99,9 @@ const ColumbusNewsSection = () => {
       "link": "https://www.visitkigali.rw/kimironko-market/"
     },
     {
-      "title": "Kigali universe",
+      "title": "The Musanze Caves",
       "description": "Explore these fascinating lava tubes formed by volcanic activity, located near Volcanoes National Park.",
-      "imageUrl": "https://example.com/musanze-caves.jpg",
+      "imageUrl": "https://lp-cms-production.imgix.net/2020-11/shutterstockRF_34434805.jpg?w=1440&h=810&fit=crop&auto=format&q=75",
       "link": "https://www.visitrwanda.com/destinations/musanze-caves/"
     }
   ];
@@ -110,27 +110,33 @@ const ColumbusNewsSection = () => {
     <div className="columbus-news-section">
       {/* Title and Subtitle */}
       <div className="columbus-news-header">
-        <h2>Yes, Kigali is Making Headlines
-        </h2>
+        <h2>Yes, Kigali is Making Headlines</h2>
         <h3>KIGALI IN THE NEWS</h3>
       </div>
-
+  
       {/* Cards Section */}
       <div className="columbus-cards">
         {newsCards.slice(0, showMore ? newsCards.length : 4).map((card, index) => (
           <div className="columbus-card" key={index}>
             <div className="columbus-card-content">
-              <img src={card.imageUrl} alt="News" className="columbus-card-image" />
-              <div className="columbus-card-overlay"></div>
-              <div className="columbus-card-text">
-                <h4>{card.title}</h4>
-                <p>{card.description}</p>
-              </div>
+              {/* Wrap the whole content in an anchor tag to make it clickable */}
+              <a href={card.link} target="_blank" rel="noopener noreferrer" className="card-link">
+                <img 
+                  src={card.imageUrl} 
+                  alt="News" 
+                  className="columbus-card-image" 
+                />
+                <div className="columbus-card-overlay"></div>
+                <div className="columbus-card-text">
+                  <h4>{card.title}</h4>
+                  <p>{card.description}</p>
+                </div>
+              </a>
             </div>
           </div>
         ))}
       </div>
-
+  
       {/* See More Button */}
       <div className="columbus-see-more">
         <button onClick={toggleShowMore} className="see-more-button">
@@ -139,6 +145,6 @@ const ColumbusNewsSection = () => {
       </div>
     </div>
   );
-};
+}    
 
 export default ColumbusNewsSection;

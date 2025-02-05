@@ -1,0 +1,55 @@
+.dropdown-menu {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  z-index: 1;
+  max-width: 50%; /* Prevents overflow on smaller screens */
+  max-height: 80vh; /* Limit the height of the dropdown */
+  overflow-y: auto; /* Adds scrolling if content exceeds height */
+  width: 100%;
+  min-width: 350px; 
+  left: 0; /* Align to the left */
+  right: 0; /* Allow it to adjust within parent */
+}
+
+/* Ensure the links are properly styled */
+.dropdown-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap; /* Prevents text from wrapping */
+  width: auto; /* Ensures the dropdown fits the text size */
+}
+
+.dropdown-link:hover {
+  background-color: #f5f5f5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    width: 100%; /* Dropdown takes full width on smaller screens */
+    position: relative; /* Switch to relative position to avoid overflow */
+    left: 0;
+    top: auto;
+    min-width: 100%; /* Ensure it takes the full width */
+    max-height: 75vh; /* Reduce the max-height to fit better on mobile */
+  }
+
+  .dropdown-link {
+    padding: 0.8rem 1rem;
+    text-align: center; /* Center the text on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .dropdown-link {
+    padding: 1rem; /* Larger padding on very small screens */
+  }
+
+  .dropdown-menu {
+    max-height: 70vh; /* Reduce the max height on smaller screens */
+  }
+}

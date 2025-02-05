@@ -1,35 +1,27 @@
-import Navbar from "./component/Navbar";
-import ImageCarousel from "./component/imageHero";
-import Slide from "./component/slide";
-import KigaliSection from './component/kigaliSection';
-import KigaliA from './component/kigaliA';
-import KigaliNewsSection from "./component/kigaliNewsCard";
-import AppDownlod from "./component/AppDawnlod";
-import Blog from "./component/Blog";
-import Hottelcheck from "./component/Hottelcheck";
-import Fest from "./component/fest";
-import Market from "./component/Market";
-import Shorts from "./component/shorts";
-import TravelSection from './component/TravelSection';
-import Footer from './component/Footer';
+import React from 'react';
+import Navbar from './component/Navbar';
+import Home from './pages/Home';
+import Events from './pages/Events';
+import Things from './pages/things';
+import Restaurants from './pages/Restorant';
+import Hotels from './pages/Hotels';
+import NeighBorhoods from './pages/Negihbourhood';
+import ExploreKigali from './pages/ExporeKigali';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <>
       <Navbar />
-      <ImageCarousel />
-      <Slide />
-      <KigaliSection />
-      <KigaliA />
-      <KigaliNewsSection />
-      <AppDownlod /> 
-      <Blog />
-      <Hottelcheck />
-      <Fest />
-      <Market />
-      <Shorts />
-      <TravelSection />
-      <Footer />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/events' element={<Events />} />
+        <Route path= '/things' element={<Things />} />
+        <Route path= '/Restaurants' element={<Restaurants />} />
+        <Route path= '/Hotels' element={<Hotels />} />
+        <Route path= '/NeighBorhoods' element={<NeighBorhoods />} />
+        <Route path= '/ExploreKigali' element={<ExploreKigali />} />
+      </Routes>
     </>
   );
 }

@@ -1,11 +1,14 @@
-// import React from 'react'
+import React from 'react'
+import TravelSection from '../component/TravelSection';
+import Footer from '../component/Footer';
 
-// function Restorant() {
-//   return (
-//     <div>
-//       <h1>Restorant</h1>
-//     </div>
-//   )
-// }
+function Restorant() {
+  return (
+    <div>
+      <TravelSection />
+      <Footer />
+    </div>
+  )
+}
 
-// export default Restorant
+export default Restorant

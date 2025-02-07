@@ -1,11 +1,14 @@
-// import React from 'react'
+import React from 'react'
+import TravelSection from '../component/TravelSection';
+import Footer from '../component/Footer';
 
-// function ThingsTodo() {
-//   return (
-//     <div>
-//       <h1>hello worldrejkgnjdmfs,gkjrdflm;</h1>
-//     </div>
-//   )
-// }
+function ThingsTodo() {
+  return (
+    <div>
+      <TravelSection />
+      <Footer />
+    </div>
+  )
+}
 
-// export default ThingsTodo
+export default ThingsTodo

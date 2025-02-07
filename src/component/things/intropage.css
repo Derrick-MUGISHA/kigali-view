@@ -1,0 +1,219 @@
+/* Hero Section */
+.hero-container {
+    position: relative;
+    height: 30rem; /* Increase height for more emphasis */
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Darken the image */
+  }
+  
+  .hero-title {
+    position: absolute;
+    bottom: 3rem; /* Increase vertical position */
+    left: 3rem; /* Increase left offset */
+    font-size: 4rem; /* Larger font size */
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Optional: Add text shadow */
+  }
+  
+  /* Awards Badges */
+  .awards-container {
+    background-color: white;
+    padding: 3rem; /* Increase padding for a larger container */
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 25rem; /* Increased max-width */
+    margin: 0 auto; /* Center horizontally */
+  }
+  
+  .badges {
+    display: flex;
+    gap: 2rem; /* Increased gap */
+    justify-content: center;
+    margin-bottom: 2rem; /* Increased margin-bottom */
+  }
+  
+  .badge {
+    width: 10rem; /* Increased width */
+    height: 10rem; /* Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem; /* Increased padding */
+    font-size: 1.25rem; /* Increased font size */
+  }
+  
+  .badge.red {
+    background-color: #e53e3e;
+    color: white;
+    border-radius: 50%;
+  }
+  
+  .badge.border {
+    border: 2px solid #f87171;
+    color: #f87171;
+    border-radius: 50%;
+  }
+  
+  .awards-text {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+  }
+  
+  /* Quick Nav */
+  .quick-nav {
+    text-align: center;
+    padding: 3rem 0;
+  }
+  
+  .quick-nav-text {
+    font-size: 1.5rem; /* Larger font size */
+  }
+  
+  .quick-nav-link {
+    color: #3b82f6;
+    text-decoration: none;
+    font-size: 1.25rem; /* Increased font size */
+  }
+  
+  .quick-nav-link:hover {
+    color: #2563eb;
+  }
+  
+  /* Intro Text */
+  .intro-text-container {
+    max-width: 80rem; /* Larger max-width */
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
+  
+  .intro-text {
+    font-size: 1.5rem; /* Increased font size */
+  }
+  
+  .intro-link {
+    color: #3b82f6;
+    text-decoration: none;
+  }
+  
+  .intro-link:hover {
+    color: #2563eb;
+  }
+  
+  /* Activity Cards */
+  .activity-card {
+    position: relative;
+    height: 20rem; /* Increased height */
+    overflow: hidden;
+    border-radius: 0.75rem;
+  }
+  
+  .activity-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .activity-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  }
+  
+  .activity-title {
+    position: absolute;
+    bottom: 1.5rem; /* Adjust position */
+    left: 1.5rem; /* Adjust position */
+    color: white;
+    font-size: 2rem; /* Larger font size */
+    font-weight: bold;
+  }
+  
+  /* Attractions Grid */
+  .attractions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem; /* Increased gap */
+    padding: 2rem;
+  }
+  
+  @media (min-width: 640px) {
+    .attractions-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .attractions-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Top Attractions */
+  .top-attractions {
+    max-width: 80rem; /* Larger max-width */
+    margin: 0 auto;
+    padding: 4rem 2rem; /* Increased padding */
+  }
+  
+  .attractions-title {
+    font-size: 2.5rem; /* Larger title */
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  
+  .attractions-text {
+    font-size: 1.5rem; /* Increased font size */
+    margin-bottom: 2rem;
+  }
+  
+  .attractions-link {
+    color: #3b82f6;
+    text-decoration: none;
+  }
+  
+  .attractions-link:hover {
+    color: #2563eb;
+  }
+  
+  /* App Container */
+  .app-container {
+    min-height: 100vh;
+    background-color: white;
+  }
+  
+  .content-container {
+    max-width: 112rem;
+    margin: 0 auto;
+    padding: 4rem 2rem; /* Increased padding */
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .main-content {
+    flex: 1;
+  }
+  
+  .awards-content {
+    flex: 1;
+  }
+  

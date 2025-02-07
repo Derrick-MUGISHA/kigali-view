@@ -6,7 +6,7 @@ import Footer from '../component/Footer';
 function ThingsTodo() {
   return (
     <div>
-      <IntroPage />
+      <IntroPage />  {/* Capitalized here as well */}
       <TravelSection />
       <Footer />
     </div>

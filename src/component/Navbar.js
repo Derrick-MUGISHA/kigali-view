@@ -49,13 +49,13 @@ const NavigationBar = () => {
             />
           </Link>
           <div className="top-nav-right">
-            <Link to="/meeting-planners" className="top-nav-link">Meeting Planners</Link>
+            <Link to="/meeting-planners" className="top-nav-link" onMouseDown={() => setIsSearchOpen(false)}>Meeting Planners</Link>
             <Link to="/tour-planners" className="top-nav-link">Tour & Reunion Planners</Link>
             <Link to="/partners" className="top-nav-link">Partners</Link>
             <Link to="/blog" className="top-nav-link">Blog</Link>
           </div>
           <div className="social-icons">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><Facebook className="social-icon" /></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><Facebook className="social-icon" /></a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><Twitter className="social-icon" /></a>
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><Instagram className="social-icon" /></a>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><Linkedin className="social-icon" /></a>
@@ -69,6 +69,10 @@ const NavigationBar = () => {
                 <Search className="social-icon-search" />
               </div>
             </div>
+          </div>
+          {/* Mobile Hamburger Menu */}
+          <div className="hamburger-menu" onClick={handleClick}>
+            {click ? <X className="hamburger-icon" /> : <Menu className="hamburger-icon" />}
           </div>
         </div>
 
@@ -126,14 +130,10 @@ const NavigationBar = () => {
           </ul>
         </div>
 
-        {/* Mobile Hamburger Menu */}
-        <div className="hamburger-menu" onClick={handleClick}>
-          {click ? <X className="hamburger-icon" /> : <Menu className="hamburger-icon" />}
-        </div>
 
         {/* Mobile Menu Overlay */}
         <div className={`mobile-menu ${click ? "open" : ""}`}>
-          
+
           <ul className="mobile-menu-links">
             <li
               className="mobile-nav-item"
@@ -191,12 +191,12 @@ const NavigationBar = () => {
             <Link to="/blog" className="top-nav-link">Blog</Link>
           </div>
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><Facebook className="social-icon" /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><Twitter className="social-icon" /></a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><Instagram className="social-icon" /></a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><Linkedin className="social-icon" /></a>
-            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><Youtube className="social-icon" /></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><Twitter className="social-icon" /></a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><Instagram className="social-icon" /></a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><Linkedin className="social-icon" /></a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><Youtube className="social-icon" /></a>
         </div>
-        
+
       </div>
 
       {/* Search Bar Popup */}

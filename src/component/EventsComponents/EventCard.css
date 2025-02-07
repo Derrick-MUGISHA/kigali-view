@@ -1,0 +1,91 @@
+/* Container for the entire section */
+.event-cards-section {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+  }
+  
+  /* Grid layout for the cards */
+  .event-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* Card wrapper */
+  .event-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Image container */
+  .event-card-image {
+    position: relative;
+  }
+  
+  /* Image style */
+  .event-card-img {
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+  }
+  
+  /* Sponsored label */
+  .sponsored-label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+  }
+  
+  /* Content area of the card */
+  .event-card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  /* Card title */
+  .event-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Card description */
+  .event-card-description {
+    color: #4b5563;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+  }
+  
+  /* Learn More link */
+  .event-card-link {
+    display: inline-flex;
+    align-items: center;
+    color: #3b82f6;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .event-card-link:hover {
+    color: #2563eb;
+  }
+  
+  /* Arrow icon style */
+  .event-card-arrow {
+    margin-left: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+  

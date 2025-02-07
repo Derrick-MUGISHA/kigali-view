@@ -1,0 +1,98 @@
+/* .hero styles for the header section */
+.hero {
+    text-align: center;
+    padding: 40px;
+    background-color: #f8f8f8;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 10px;
+  }
+  
+  /* .visitor-resources for the visitor resources section */
+  .visitor-resources {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .visitor-resources h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Flexbox layout for the resource grid */
+  .resources-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for each resource card */
+  .resource-card {
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    transition: transform 0.3s ease;
+  }
+  
+  .resource-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .resource-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .resource-card h3 {
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  /* Style for the "Show More" / "Show Less" button */
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* Responsive layout for small screens */
+  @media (max-width: 768px) {
+    .resources-grid {
+      flex-direction: column; /* Stack the cards on smaller screens */
+      align-items: center;
+    }
+  
+    .resource-card {
+      width: 90%; /* Make the cards take up most of the width on smaller screens */
+    }
+  }
+  

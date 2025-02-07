@@ -5,7 +5,7 @@ import Events from './pages/Events';
 import Things from './pages/things';
 import Restaurants from './pages/Restorant';
 import Hotels from './pages/Hotels';
-import NeighBorhoods from './pages/Negihbourhood';
+import NeighBorhoodsPage from './pages/NeghbourhoodPage';
 import ExploreKigali from './pages/ExporeKigali';
 import { Routes, Route } from 'react-router-dom';
 
@@ -19,7 +19,7 @@ function App() {
         <Route path= '/things' element={<Things />} />
         <Route path= '/Restaurants' element={<Restaurants />} />
         <Route path= '/Hotels' element={<Hotels />} />
-        <Route path= '/NeighBorhoods' element={<NeighBorhoods />} />
+        <Route path= '/NeighBorhoods' element={<NeighBorhoodsPage />} />
         <Route path= '/ExploreKigali' element={<ExploreKigali />} />
       </Routes>
     </>

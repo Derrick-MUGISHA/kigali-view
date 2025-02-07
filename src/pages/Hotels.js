@@ -1,9 +1,12 @@
 import React from 'react'
+import Whote from '../component/HotelsComponent/Whote';
+import HotelIntro from '../component/HotelsComponent/HotelIntro';
 
 function Hotels() {
   return (
     <div>
-      <h1>Hotels</h1>
+        <HotelIntro />
+      <Whote />
     </div>
   )
 }

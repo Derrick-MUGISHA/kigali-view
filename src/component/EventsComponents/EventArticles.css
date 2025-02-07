@@ -1,0 +1,149 @@
+/* FeaturedSections.css */
+.featured-sections {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  /* Featured Articles Grid */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  @media (min-width: 768px) {
+    .featured-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Featured Card Styles */
+  .featured-card {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .featured-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .featured-card:hover .featured-image {
+    transform: scale(1.05);
+  }
+  
+  .featured-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  }
+  
+  .featured-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1.5rem;
+  }
+  
+  .featured-tag {
+    display: inline-block;
+    background-color: #f85a3e;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .featured-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  
+  /* Sponsored Content Grid */
+  .sponsored-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 768px) {
+    .sponsored-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Sponsored Card Styles */
+  .sponsored-card {
+    background: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .sponsored-image-container {
+    position: relative;
+  }
+  
+  .sponsored-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .sponsored-tag {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .sponsored-content {
+    padding: 1.5rem;
+  }
+  
+  .sponsored-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.75rem;
+  }
+  
+  .sponsored-description {
+    color: #666;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .read-more-button {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .read-more-button:hover {
+    background-color: #333;
+  }

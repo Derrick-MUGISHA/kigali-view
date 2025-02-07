@@ -1,0 +1,58 @@
+.Hotel-container {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.Hotel-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.Hotel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out; /* Added smooth transition */
+}
+
+/* Styling for the caption text */
+.Hotel-caption {
+    width: 100%;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    transition: opacity 1s ease-in-out; /* Add smooth transition for text */
+}
+
+/* Media Queries for responsive behavior */
+
+/* Tablet screens */
+@media (max-width: 768px) {
+    .Hotel-container {
+        height: 50vh; /* Adjust height for tablets */
+    }
+    .Hotel-caption {
+        font-size: 18px; /* Adjust font size for tablets */
+        bottom: 15%;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    .Hotel-container {
+        height: 40vh; /* Adjust height for mobile */
+    }
+    .Hotel-caption {
+        font-size: 14px; /* Smaller font size for mobile */
+        bottom: 20%;
+    }
+}

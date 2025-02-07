@@ -1,171 +1,170 @@
 .promotional-slider {
-    width: 100%;
-    overflow: hidden;
-    padding: 0 1rem;
-    margin-top: 1rem; /* Adding some padding for better spacing */
-  }
-  
+  width: 100%;
+  overflow: hidden;
+  padding: 0 1rem;
+  margin-top: 1rem; /* Adding some padding for better spacing */
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem;
+  width: 100%;
+  flex-wrap: wrap; /* Ensure the items wrap on smaller screens */
+}
+
+.slide-container {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  flex: 1;
+  min-width: 380px; /* Ensure it's not too small on small screens */
+}
+
+.slide-container:hover {
+  flex: 1.5;
+}
+
+/* Image container settings */
+.image-container {
+  position: relative;
+  height: 18rem;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Overlay for darkening effect */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+}
+
+/* Color change on hover */
+.slide-container:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Content positioning and styling */
+.content {
+  position: absolute;
+  inset: 0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.subtext {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.arrow-indicator {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 1.875rem;
+}
+
+.slide-container:hover .arrow-indicator {
+  opacity: 1;
+}
+
+/* Color variants for each slide */
+.text-cyan {
+  color: #22d3ee;
+}
+
+.text-green {
+  color: #4ade80;
+}
+
+.text-yellow {
+  color: #facc15;
+}
+
+.text-red {
+  color: rgb(66, 14, 237);
+}
+
+/* Hover color changes for the slide */
+.slide-container:hover .text-cyan {
+  color: #0ea5e9;
+}
+
+.slide-container:hover .text-green {
+  color: #22c55e;
+}
+
+.slide-container:hover .text-yellow {
+  color: #eab308;
+}
+
+/* Additional image section with hover effect */
+.additional-image .overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.additional-image:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Styles for Mobile and Tablet Screens */
+@media (max-width: 1024px) {
   .slider-container {
-    display: flex;
-    flex-direction: row;
-    gap: 0.6rem;
-    width: 100%;
-    flex-wrap: wrap; /* Ensure the items wrap on smaller screens */
+    gap: 0.5rem;
+    margin-top: 0.1rem;
   }
-  
+
   .slide-container {
-    position: relative;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    flex: 1;
-    min-width: 380px; /* Ensure it's not too small on small screens */
+    min-width: 45%; /* Larger minimum width on tablets */
   }
-  
-  .slide-container:hover {
-    flex: 1.5;
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+    flex-direction: column; /* Stack the slides vertically on small screens */
+    gap: 1.5rem;
   }
-  
-  /* Image container settings */
+
+  .slide-container {
+    min-width: 100%; /* Full width for each slide */
+  }
+
   .image-container {
-    position: relative;
-    height: 18rem;
+    height: 14rem; /* Adjust image height for mobile screens */
   }
-  
-  .slide-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0.5rem;
-  }
-  
-  /* Overlay for darkening effect */
-  .overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease;
-    border-radius: 0.5rem;
-  }
-  
-  /* Color change on hover */
-  .slide-container:hover .overlay {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  /* Content positioning and styling */
+
   .content {
-    position: absolute;
-    inset: 0;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 1rem; /* Smaller padding for mobile screens */
   }
-  
-  .subtext {
-    font-size: 0.875rem;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
-  }
-  
+
   .title {
-    font-size: 1.5rem;
-    font-weight: 800;
-    line-height: 1.2;
+    font-size: 1.25rem; /* Adjust font size for mobile */
   }
-  
+
+  .subtext {
+    font-size: 0.75rem; /* Smaller subtext on mobile */
+  }
+
   .arrow-indicator {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    font-size: 1.875rem;
+    font-size: 1.5rem; /* Adjust arrow size */
   }
-  
-  .slide-container:hover .arrow-indicator {
-    opacity: 1;
-  }
-  
-  /* Color variants for each slide */
-  .text-cyan {
-    color: #22d3ee;
-  }
-  
-  .text-green {
-    color: #4ade80;
-  }
-  
-  .text-yellow {
-    color: #facc15;
-  }
-  
-  .text-red {
-    color: rgb(66, 14, 237);
-  }
-  
-  /* Hover color changes for the slide */
-  .slide-container:hover .text-cyan {
-    color: #0ea5e9;
-  }
-  
-  .slide-container:hover .text-green {
-    color: #22c55e;
-  }
-  
-  .slide-container:hover .text-yellow {
-    color: #eab308;
-  }
-  
-  /* Additional image section with hover effect */
-  .additional-image .overlay {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  
-  .additional-image:hover .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  /* Responsive Styles for Mobile and Tablet Screens */
-  @media (max-width: 1024px) {
-    .slider-container {
-      gap: 0.5rem;
-      margin-top: 0.1rem;
-    }
-  
-    .slide-container {
-      min-width: 45%; /* Larger minimum width on tablets */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .slider-container {
-      flex-direction: column; /* Stack the slides vertically on small screens */
-      gap: 1.5rem;
-    }
-  
-    .slide-container {
-      min-width: 100%; /* Full width for each slide */
-    }
-  
-    .image-container {
-      height: 14rem; /* Adjust image height for mobile screens */
-    }
-  
-    .content {
-      padding: 1rem; /* Smaller padding for mobile screens */
-    }
-  
-    .title {
-      font-size: 1.25rem; /* Adjust font size for mobile */
-    }
-  
-    .subtext {
-      font-size: 0.75rem; /* Smaller subtext on mobile */
-    }
-  
-    .arrow-indicator {
-      font-size: 1.5rem; /* Adjust arrow size */
-    }
-  }
-  
+}

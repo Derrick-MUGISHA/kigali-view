@@ -1,0 +1,150 @@
+/* styles.css */
+
+/* General Body and Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+  
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  
+  .bg-black {
+    background-color: black;
+  }
+  
+  .text-white {
+    color: white;
+  }
+  
+  /* Navigation */
+  .navbar {
+    background-color: black;
+    color: white;
+    padding: 20px;
+  }
+  
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .brand {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-links {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .navbar .nav-links button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .nav-links button:hover {
+    color: #d1d1d1;
+  }
+  
+  /* Main Section */
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px;
+  }
+  
+  .share-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+  }
+  
+  .share-button .share-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+  
+  .share-button button {
+    display: flex;
+    align-items: center;
+    color: #0077cc;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .share-button button:hover {
+    color: #005fa3;
+  }
+  
+  /* Header */
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 32px;
+  }
+  
+  /* Promo Section */
+  .promo-section {
+    background-color: #f8f8f8;
+    padding: 32px;
+    border-radius: 8px;
+    margin-top: 48px;
+  }
+  
+  .promo-section .promo-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  
+  .promo-section .promo-left {
+    width: 25%;
+  }
+  
+  .promo-section .promo-right {
+    width: 75%;
+  }
+  
+  .promo-section .promo-header {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e63946;
+  }
+  
+  .promo-section .promo-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .promo-section .promo-description {
+    margin-bottom: 16px;
+  }
+  
+  .promo-section .join-button {
+    background-color: #0077cc;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .promo-section .join-button:hover {
+    background-color: #005fa3;
+  }
+  

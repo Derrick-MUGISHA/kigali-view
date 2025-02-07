@@ -1,11 +1,11 @@
-import React from 'react'
+// import React from 'react'
 
-function Restorant() {
-  return (
-    <div>
-      <h1>Restorant</h1>
-    </div>
-  )
-}
+// function Restorant() {
+//   return (
+//     <div>
+//       <h1>Restorant</h1>
+//     </div>
+//   )
+// }
 
-export default Restorant
+// export default Restorant

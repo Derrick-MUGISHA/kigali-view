@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  Facebook,
-  Instagram,
-  Twitter,
-  Youtube,
-  Linkedin,
-  Search,
-  Heart,
-  Menu,
-  X
+  Facebook, Instagram, Twitter, Youtube, Linkedin, Search, Heart, Menu, X
 } from "lucide-react";
 import "./Navbar.css";
 import { Thingstodo } from "../Dropdown/Thingstodo";
@@ -48,6 +40,7 @@ const NavigationBar = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
+        {/* Top Navigation */}
         <div className="top-nav">
           <Link to="/" className="logo">
             <img
@@ -55,53 +48,25 @@ const NavigationBar = () => {
               alt="logo"
             />
           </Link>
-
-          {/* Mobile Controls */}
-          <div className="mobile-controls">
-            <div className="search-icon" onClick={toggleSearch}>
-              <Search className="social-icon-search" />
-            </div>
-            <div className="hamburger-menu" onClick={handleClick}>
-              {click ? <X className="hamburger-icon" /> : <Menu className="hamburger-icon" />}
-            </div>
-          </div>
-
-          {/* Desktop Navigation */}
           <div className="top-nav-right">
-            <Link to="/meeting-planners" className="top-nav-link">
-              Meeting Planners
-            </Link>
-            <Link to="/tour-planners" className="top-nav-link">
-              Tour & Reunion Planners
-            </Link>
-            <Link to="/partners" className="top-nav-link">
-              Partners
-            </Link>
-            <Link to="/blog" className="top-nav-link">
-              Blog
-            </Link>
+            <Link to="/meeting-planners" className="top-nav-link">Meeting Planners</Link>
+            <Link to="/tour-planners" className="top-nav-link">Tour & Reunion Planners</Link>
+            <Link to="/partners" className="top-nav-link">Partners</Link>
+            <Link to="/blog" className="top-nav-link">Blog</Link>
           </div>
-
           <div className="social-icons">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <Facebook className="social-icon" />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <Twitter className="social-icon" />
-            </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              <Instagram className="social-icon" />
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <Linkedin className="social-icon" />
-            </a>
-            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-              <Youtube className="social-icon" />
-            </a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><Facebook className="social-icon" /></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><Twitter className="social-icon" /></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><Instagram className="social-icon" /></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><Linkedin className="social-icon" /></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><Youtube className="social-icon" /></a>
             <div className="actions-container">
               <div className="favorites">
                 <Heart className="social-icon" />
                 <span className="favorites-count">(0)</span>
+              </div>
+              <div className="search-icon" onClick={toggleSearch}>
+                <Search className="social-icon-search" />
               </div>
             </div>
           </div>
@@ -110,55 +75,131 @@ const NavigationBar = () => {
         {/* Main Navigation */}
         <div className="main-nav">
           <ul className="main-nav-links">
-            {[
-              { path: "/events", title: "EVENTS", dropdown: Menuitems },
-              { path: "/things", title: "THINGS TO DO", dropdown: Thingstodo },
-              { path: "/restaurants", title: "RESTAURANTS", dropdown: Restaurants },
-              { path: "/hotels", title: "HOTELS", dropdown: Hotels },
-              { path: "/neighborhoods", title: "NEIGHBORHOODS", dropdown: NeighBorhoods },
-              { path: "/ExploreKigali", title: "EXPLORE KIGALI", dropdown: ExploreKigali }
-            ].map((item) => (
-              <li
-                key={item.path}
-                className="nav-item"
-                onMouseEnter={() => onMouseEnter(item.title.toLowerCase().replace(/ /g, ''))}
-                onMouseLeave={() => onMouseLeave(item.title.toLowerCase().replace(/ /g, ''))}
-              >
-                <Link to={item.path} className="main-nav-link" onClick={closeMobileMenu}>
-                  {item.title}
-                </Link>
-                {dropdownStates[item.title.toLowerCase().replace(/ /g, '')] && <item.dropdown />}
-              </li>
-            ))}
+            <li
+              className="nav-item"
+              onMouseEnter={() => onMouseEnter("events")}
+              onMouseLeave={() => onMouseLeave("events")}
+            >
+              <Link to="/events" className="main-nav-link" onClick={closeMobileMenu}>EVENTS</Link>
+              {dropdownStates.events && <Menuitems />}
+            </li>
+            <li
+              className="nav-item"
+              onMouseEnter={() => onMouseEnter("thingsToDo")}
+              onMouseLeave={() => onMouseLeave("thingsToDo")}
+            >
+              <Link to="/things" className="main-nav-link" onClick={closeMobileMenu}>THINGS TO DO</Link>
+              {dropdownStates.thingsToDo && <Thingstodo />}
+            </li>
+            <li
+              className="nav-item"
+              onMouseEnter={() => onMouseEnter("restaurants")}
+              onMouseLeave={() => onMouseLeave("restaurants")}
+            >
+              <Link to="/restaurants" className="main-nav-link" onClick={closeMobileMenu}>RESTAURANTS</Link>
+              {dropdownStates.restaurants && <Restaurants />}
+            </li>
+            <li
+              className="nav-item"
+              onMouseEnter={() => onMouseEnter("hotels")}
+              onMouseLeave={() => onMouseLeave("hotels")}
+            >
+              <Link to="/hotels" className="main-nav-link" onClick={closeMobileMenu}>HOTELS</Link>
+              {dropdownStates.hotels && <Hotels />}
+            </li>
+            <li
+              className="nav-item"
+              onMouseEnter={() => onMouseEnter("neighborhoods")}
+              onMouseLeave={() => onMouseLeave("neighborhoods")}
+            >
+              <Link to="/neighborhoods" className="main-nav-link" onClick={closeMobileMenu}>NEIGHBORHOODS</Link>
+              {dropdownStates.neighborhoods && <NeighBorhoods />}
+            </li>
+            <li
+              className="nav-item"
+              onMouseEnter={() => onMouseEnter("exploreKigali")}
+              onMouseLeave={() => onMouseLeave("exploreKigali")}
+            >
+              <Link to="/ExploreKigali" className="main-nav-link" onClick={closeMobileMenu}>EXPLORE KIGALI</Link>
+              {dropdownStates.exploreKigali && <ExploreKigali />}
+            </li>
           </ul>
         </div>
 
-        {/* Mobile Menu */}
-        <div className={`mobile-menu ${click ? "open" : ""}`}>
-          <ul className="mobile-menu-links">
-            {[
-              { path: "/events", title: "EVENTS" },
-              { path: "/things", title: "THINGS TO DO" },
-              { path: "/restaurants", title: "RESTAURANTS" },
-              { path: "/hotels", title: "HOTELS" },
-              { path: "/neighborhoods", title: "NEIGHBORHOODS" },
-              { path: "/ExploreKigali", title: "EXPLORE KIGALI" },
-              { path: "/meeting-planners", title: "MEETING PLANNERS" },
-              { path: "/tour-planners", title: "TOUR & REUNION PLANNERS" },
-              { path: "/partners", title: "PARTNERS" },
-              { path: "/blog", title: "BLOG" }
-            ].map((item) => (
-              <li key={item.path} className="mobile-nav-item">
-                <Link to={item.path} className="mobile-nav-link" onClick={closeMobileMenu}>
-                  {item.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        {/* Mobile Hamburger Menu */}
+        <div className="hamburger-menu" onClick={handleClick}>
+          {click ? <X className="hamburger-icon" /> : <Menu className="hamburger-icon" />}
         </div>
+
+        {/* Mobile Menu Overlay */}
+        <div className={`mobile-menu ${click ? "open" : ""}`}>
+          
+          <ul className="mobile-menu-links">
+            <li
+              className="mobile-nav-item"
+              onMouseEnter={() => onMouseEnter("events")}
+              onMouseLeave={() => onMouseLeave("events")}
+            >
+              <Link to="/events" className="mobile-nav-link" onClick={closeMobileMenu}>EVENTS</Link>
+              {dropdownStates.events && <Menuitems />}
+            </li>
+            <li
+              className="mobile-nav-item"
+              onMouseEnter={() => onMouseEnter("thingsToDo")}
+              onMouseLeave={() => onMouseLeave("thingsToDo")}
+            >
+              <Link to="/things" className="mobile-nav-link" onClick={closeMobileMenu}>THINGS TO DO</Link>
+              {dropdownStates.thingsToDo && <Thingstodo />}
+            </li>
+            <li
+              className="mobile-nav-item"
+              onMouseEnter={() => onMouseEnter("restaurants")}
+              onMouseLeave={() => onMouseLeave("restaurants")}
+            >
+              <Link to="/restaurants" className="mobile-nav-link" onClick={closeMobileMenu}>RESTAURANTS</Link>
+              {dropdownStates.restaurants && <Restaurants />}
+            </li>
+            <li
+              className="mobile-nav-item"
+              onMouseEnter={() => onMouseEnter("hotels")}
+              onMouseLeave={() => onMouseLeave("hotels")}
+            >
+              <Link to="/hotels" className="mobile-nav-link" onClick={closeMobileMenu}>HOTELS</Link>
+              {dropdownStates.hotels && <Hotels />}
+            </li>
+            <li
+              className="mobile-nav-item"
+              onMouseEnter={() => onMouseEnter("neighborhoods")}
+              onMouseLeave={() => onMouseLeave("neighborhoods")}
+            >
+              <Link to="/neighborhoods" className="mobile-nav-link" onClick={closeMobileMenu}>NEIGHBORHOODS</Link>
+              {dropdownStates.neighborhoods && <NeighBorhoods />}
+            </li>
+            <li
+              className="mobile-nav-item"
+              onMouseEnter={() => onMouseEnter("exploreKigali")}
+              onMouseLeave={() => onMouseLeave("exploreKigali")}
+            >
+              <Link to="/ExploreKigali" className="mobile-nav-link" onClick={closeMobileMenu}>EXPLORE KIGALI</Link>
+              {dropdownStates.exploreKigali && <ExploreKigali />}
+            </li>
+          </ul>
+          <div className="top-nav-right">
+            <Link to="/meeting-planners" className="top-nav-link">Meeting Planners</Link>
+            <Link to="/tour-planners" className="top-nav-link">Tour & Reunion Planners</Link>
+            <Link to="/partners" className="top-nav-link">Partners</Link>
+            <Link to="/blog" className="top-nav-link">Blog</Link>
+          </div>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><Facebook className="social-icon" /></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><Twitter className="social-icon" /></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><Instagram className="social-icon" /></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><Linkedin className="social-icon" /></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><Youtube className="social-icon" /></a>
+        </div>
+        
       </div>
 
-      {/* Search Popup */}
+      {/* Search Bar Popup */}
       {isSearchOpen && <SearchPopup setIsSearchOpen={setIsSearchOpen} />}
     </nav>
   );
@@ -182,9 +223,7 @@ const SearchPopup = ({ setIsSearchOpen }) => {
         onChange={(e) => setQuery(e.target.value)}
         onKeyDown={handleSearch}
       />
-      <button onClick={() => setIsSearchOpen(false)} className="close-search">
-        X
-      </button>
+      <button onClick={() => setIsSearchOpen(false)} className="close-search">X</button>
     </div>
   );
 };

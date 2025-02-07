@@ -4,48 +4,53 @@ import { Link } from "react-router-dom";
 export const NeighBorhoods = () => {
   const items = [
     {
-      title: "Kigali Serena Hotel",
-      path: "/heaven",
+      title: "Nyamirambo",
+      path: "/nyamirambo",
       cName: "dropdown-link",
     },
     {
-      title: "Radisson Blu Hotel & Convention Centre",
-      path: "/the-hut",
+      title: "Kimironko",
+      path: "/kimironko",
       cName: "dropdown-link",
     },
     {
-      title: "The Retreat by Heaven ",
-      path: "/bourbon-coffee",
+      title: "Nyarutarama",
+      path: "/nyarutarama",
       cName: "dropdown-link",
     },
     {
-      title: "Hotel des Mille Collines",
-      path: "/la-bonne-adresse",
+      title: "Kigali City Centre",
+      path: "/city-centre",
       cName: "dropdown-link",
     },
     {
-      title: "Gorillas Golf Hotel",
-      path: "/repub-lounge",
+      title: "Remera",
+      path: "/remera",
       cName: "dropdown-link",
     },
     {
-      title: "Park Inn by Radisson Kigali",
-      path: "/brachetto",
+      title: "Kabuye",
+      path: "/kabuye",
       cName: "dropdown-link",
     },
     {
-      title: "Hôtel La Palisse Nyandungu",
-      path: "/khmer",
+      title: "Gikondo",
+      path: "/gikondo",
       cName: "dropdown-link",
     },
     {
-      title: "Iris Guest House",
-      path: "/soleluna",
+      title: "Kibagabaga",
+      path: "/kibagabaga",
       cName: "dropdown-link",
     },
     {
-      title: "M Hotel Kigali",
-      path: "/indian-kadhai",
+      title: "Biryogo",
+      path: "/biryogo",
+      cName: "dropdown-link",
+    },
+    {
+      title: "Kigali Heights",
+      path: "/kigali-heights",
       cName: "dropdown-link",
     },
   ];

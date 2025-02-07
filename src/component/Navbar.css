@@ -1,8 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Main Navigation Container */
 .navbar {
   background-color: black;
   width: 100%;
-  position: fixed;
+  position: relative; /* Changed from 'fixed' to 'relative' */
   top: 0;
   z-index: 1000;
 }
@@ -196,7 +202,6 @@
   font-size: 1.1rem;
   font-weight: 600;
   padding: 0.5rem 0;
-  display: block;
 }
 
 /* Search Popup */
@@ -240,7 +245,7 @@
 /* Responsive Breakpoints */
 @media screen and (max-width: 960px) {
   .navbar {
-    height: 60px;
+    height: auto; /* Remove fixed height */
   }
 
   .nav-container {
@@ -249,8 +254,8 @@
   }
 
   .top-nav {
-    height: 100%;
-    padding: 0;
+    height: auto;
+    padding: 0.5rem 0;
     border: none;
   }
 
@@ -288,7 +293,7 @@
 
 @media screen and (max-width: 600px) {
   .navbar {
-    height: 50px;
+    height: auto;
   }
 
   .nav-container {

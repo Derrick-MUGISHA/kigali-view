@@ -5,7 +5,7 @@ import "./Thingstodo.css";
 export const Thingstodo = () => {
   const items = [
     {
-      title: "Visit the Kigali Genocide Memorial dhffhridjfhgrdiri",
+      title: "Visit the Kigali Genocide Memorial",
       path: "/",
       cName: "dropdown-link",
     },

@@ -71,6 +71,9 @@ const NavigationBar = () => {
             </div>
           </div>
           {/* Mobile Hamburger Menu */}
+          <div className="social-icon-search-mobile" onClick={toggleSearch}>
+            <Search className="social-icon-search" />
+          </div>
           <div className="hamburger-menu" onClick={handleClick}>
             {click ? <X className="hamburger-icon" /> : <Menu className="hamburger-icon" />}
           </div>
@@ -184,17 +187,19 @@ const NavigationBar = () => {
               {dropdownStates.exploreKigali && <ExploreKigali />}
             </li>
           </ul>
-          <div className="top-nav-right">
+          <div className="top-nav-right-mobile">
             <Link to="/meeting-planners" className="top-nav-link">Meeting Planners</Link>
             <Link to="/tour-planners" className="top-nav-link">Tour & Reunion Planners</Link>
             <Link to="/partners" className="top-nav-link">Partners</Link>
             <Link to="/blog" className="top-nav-link">Blog</Link>
           </div>
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><Facebook className="social-icon" /></a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><Twitter className="social-icon" /></a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><Instagram className="social-icon" /></a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><Linkedin className="social-icon" /></a>
-          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><Youtube className="social-icon" /></a>
+          <div className="social-icons-mobile">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><Facebook className="social-icon" /></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><Twitter className="social-icon" /></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><Instagram className="social-icon" /></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><Linkedin className="social-icon" /></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><Youtube className="social-icon" /></a>
+          </div>
         </div>
 
       </div>

@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -111,7 +111,7 @@
 
 /* Main Navigation */
 .main-nav {
-  padding: 0.5rem 0;
+  padding: 0.2rem 0;
 }
 
 .main-nav-links {
@@ -203,6 +203,9 @@
   font-weight: 600;
   padding: 0.5rem 0;
 }
+.social-icon-search-mobile {
+  display: none;
+}
 
 /* Search Popup */
 .search-popup {
@@ -280,6 +283,9 @@
 
   .hamburger-menu {
     display: flex;
+    cursor: pointer;
+    font-size: 4rem;
+    width: 50px;
   }
 
   /* Hide desktop elements */
@@ -288,6 +294,43 @@
   .main-nav,
   .actions-container {
     display: none;
+  }
+  .top-nav-right-mobile {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+  }
+  .nav-item:hover .dropdown {
+    display: block;
+  }
+  .top-nav-right-mobile :link {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+  }
+  .social-icons-mobile {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    margin-top: 70px;
+  }
+  .social-icon-search-mobile a {
+    font-size: x-large;
+  }
+  .social-icon-search-mobile {
+    color: white;
+    width: 24px;
+    height: 23px;
+    margin-left: 37rem;
+    cursor: pointer;
+  }
+  .social-icon-search-mobile {
+    display: block;
   }
 }
 
@@ -301,21 +344,38 @@
   }
 
   .logo img {
-    height: 25px;
+    height: 90px;
   }
 
   .mobile-controls {
     gap: 1rem;
   }
+  .social-icons-mobile {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    margin-top: 70px;
+  }
+  .top-nav-right-mobile {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
 
   .social-icon-search,
   .hamburger-icon {
-    width: 20px;
-    height: 20px;
+    width: 90px;
+    height: 90px;
   }
 
   .mobile-menu {
-    top: 50px;
+    top: 90px;
     height: calc(100vh - 50px);
   }
 
@@ -334,7 +394,7 @@
   position: relative;
 }
 
-.mobile-nav-item:hover .mobile-dropdown, 
+.mobile-nav-item:hover .mobile-dropdown,
 .mobile-nav-item:focus-within .mobile-dropdown {
   display: block;
 }
@@ -361,3 +421,13 @@
 .mobile-dropdown a:hover {
   color: #ccc;
 }
+/* .social-icon-search-mobile {
+  color: white;
+  width: 24px;
+  height: 23px;
+  margin-left: 37rem;
+  cursor: pointer;
+}
+.social-icon-search-mobile {
+  display: block;
+} */

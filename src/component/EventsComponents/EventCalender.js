@@ -68,7 +68,7 @@ const Events = () => {
     },
     {
       id: 2,
-      image: "/https://i.postimg.cc/vmH8rtss/kigali-view-high-resolution-logo.png",
+      image: "https://i.postimg.cc/vmH8rtss/kigali-view-high-resolution-logo.png",
       title: "Wanderlights",
       location: "Downtown Columbus",
       recurring: "Recurring daily until February 16, 2025"
@@ -100,6 +100,51 @@ const Events = () => {
       title: "Hot Stuff: A Sketch Comedy and Music Show",
       location: "Short North Stage",
       recurring: null
+    },
+    {
+      id: 7,
+      image: "https://i.postimg.cc/vmH8rtss/kigali-view-high-resolution-logo.png",
+      title: "25 Reasons to Visit Columbus in 2025",
+      location: "Downtown Columbus",
+      recurring: "Recurring daily until February 16, 2025"
+    },
+    {
+      id: 8,
+      image: "https://i.postimg.cc/vmH8rtss/kigali-view-high-resolution-logo.png",
+      title: "Columbus Improv Comedy Meetup!",
+      location: "Nest Theatre",
+      recurring: null
+
+    },
+    {
+      id: 9,
+      image: "https://i.postimg.cc/vmH8rtss/kigali-view-high-resolution-logo.png",
+      title: "Gallery Listening Room",
+      location: "Wonderlust Studio",
+      recurring: null
+    },
+    {
+      id: 10,
+      image: "https://i.postimg.cc/vmH8rtss/kigali-view-high-resolution-logo.png",
+      title: "Hot Stuff: A Sketch Comedy and Music Show",
+      location: "Short North Stage",
+      recurring: null
+
+    },
+    {
+      id: 11,
+      image: "https://i.postimg.cc/vmH8rtss/kigali-view-high-resolution-logo.png",
+      title: "25 Reasons to Visit Columbus in 2025",
+      location: "Downtown Columbus",
+      recurring: "Recurring daily until February 16, 2025"
+    },
+    {
+      id: 12,
+      image: "https://i.postimg.cc/vmH8rtss/kigali-view-high-resolution-logo.png",
+      title: "Columbus Improv Comedy Meetup!",
+      location: "Nest Theatre",
+      recurring: null
+      
     }
   ];
 
@@ -119,6 +164,7 @@ const Events = () => {
             <button className={`events-sidebar__range-button ${dateRange === 'weekend' ? 'active' : ''}`} onClick={() => setDateRange('weekend')}>Weekend</button>
           </div>
           <button className={`events-sidebar__range-button ${dateRange === 'month' ? 'active' : ''}`} onClick={() => setDateRange('month')}>Month</button>
+          {/* <button className={`events-sidebar__range-button ${dateRange === 'all' ? 'active' : ''}`} onClick={() => setDateRange('all')}>Time</button> */}
         </div>
 
         <div className="events-sidebar__section">
@@ -132,6 +178,20 @@ const Events = () => {
           <div className="events-sidebar__category">
             <input type="checkbox" id="music" />
             <label htmlFor="music">Music/Concerts (31)</label>
+            <input type="checkbox" id="sports" />
+            <label htmlFor="sports">Sports (27)</label>
+            <input type="checkbox" id="arts" />
+            <label htmlFor="arts">Arts (19)</label>
+            <input type="checkbox" id="family" />
+            <label htmlFor="family">Family (17)</label>
+            <input type="checkbox" id="festivals" />
+            <label htmlFor="festivals">Festivals (15)</label>
+            <input type="checkbox" id="other" />
+            <label htmlFor="other">Other (12)</label>
+            <input type="checkbox" id="charity" />
+            <label htmlFor="charity">Charity (10)</label>
+            <input type="checkbox" id="recreation" />
+            <label htmlFor="recreation">Recreation (9)</label>
           </div>
         </div>
       </div>

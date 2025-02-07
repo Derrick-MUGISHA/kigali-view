@@ -28,6 +28,7 @@
   background-color: #111827;
   padding: 1.5rem;
   border-radius: 0.5rem;
+  color: white;
 }
 
 .events-sidebar__section-title {
@@ -46,12 +47,12 @@
 }
 
 .events-sidebar__rss-icon {
-  color: white;
+  color: #111827;
   cursor: pointer;
 }
 
 .events-sidebar__search-input {
-  width: 80%;
+  width: 90%;
   padding: 0.5rem;
   border: 1px solid #374151;
   border-radius: 0.25rem;
@@ -61,8 +62,7 @@
 
 .events-sidebar__date-range-buttons {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -73,10 +73,37 @@
   color: white;
   border: none;
   cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .events-sidebar__range-button.active {
   background-color: #4b5563;
+}
+
+.events-sidebar__category {
+  margin-bottom: 1rem;
+  background-color: #111827;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.events-sidebar__category input[type="checkbox"] {
+  margin-left: auto;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.events-sidebar__category label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Calendar */
@@ -276,4 +303,49 @@
 
 .events-grid__quick-view:hover {
   background-color: #4b5563;
+}
+
+/* New Consistent Button Styling for All Buttons */
+button {
+  background-color: #374151;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #4b5563;
+}
+
+.events-view-sort__view-button, 
+.events-view-sort__sort-button,
+.events-sidebar__range-button {
+  background-color: #374151;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.events-view-sort__view-button:hover, 
+.events-view-sort__sort-button:hover,
+.events-sidebar__range-button:hover {
+  background-color: #4b5563;
+}
+
+.events-sidebar__date-range-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.events-sidebar__view-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -170,7 +170,7 @@
 }
 
 .mobile-menu {
-  display: none;
+  display: block;
   position: fixed;
   top: 60px;
   right: 0;
@@ -328,4 +328,36 @@
     font-size: 1rem;
     padding: 0.75rem;
   }
+}
+/* Mobile Dropdown Menu */
+.mobile-nav-item {
+  position: relative;
+}
+
+.mobile-nav-item:hover .mobile-dropdown, 
+.mobile-nav-item:focus-within .mobile-dropdown {
+  display: block;
+}
+
+.mobile-dropdown {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: black;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1010; /* Ensure dropdown is above other content */
+}
+
+.mobile-dropdown a {
+  display: block;
+  color: white;
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.mobile-dropdown a:hover {
+  color: #ccc;
 }

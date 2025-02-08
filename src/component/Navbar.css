@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -247,14 +246,11 @@
 }
 
 /* Responsive Breakpoints */
+
+/* Large screens (960px and up) */
 @media screen and (max-width: 960px) {
   .navbar {
-    height: auto; /* Remove fixed height */
-  }
-
-  .nav-container {
-    height: 100%;
-    padding: 0 1rem;
+    height: auto;
   }
 
   .top-nav {
@@ -273,15 +269,6 @@
     gap: 1.5rem;
   }
 
-  .search-icon {
-    display: flex;
-  }
-
-  .social-icon-search {
-    width: 24px;
-    height: 24px;
-  }
-
   .hamburger-menu {
     display: flex;
     cursor: pointer;
@@ -289,13 +276,13 @@
     width: 50px;
   }
 
-  /* Hide desktop elements */
   .top-nav-right,
   .top-nav .social-icons,
   .main-nav,
   .actions-container {
     display: none;
   }
+
   .top-nav-right-mobile {
     display: flex;
     gap: 2rem;
@@ -304,14 +291,7 @@
     margin-left: 2rem;
     font-size: 0.9rem;
   }
-  .nav-item:hover .dropdown {
-    display: block;
-  }
-  .top-nav-right-mobile :link {
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-  }
+
   .social-icons-mobile {
     display: flex;
     align-items: center;
@@ -320,21 +300,18 @@
     cursor: pointer;
     margin-top: 70px;
   }
-  .social-icon-search-mobile a {
+
+  .social-icon-search-mobile {
     font-size: x-large;
-  }
-  .social-icon-search-mobile {
-    color: white;
     width: 24px;
-    height: 23px;
-    margin-left: 37rem;
+    height: 24px;
+    margin-left: auto;
+    margin-right: 1rem;
     cursor: pointer;
-  }
-  .social-icon-search-mobile {
-    display: block;
   }
 }
 
+/* Medium screens (600px to 960px) */
 @media screen and (max-width: 600px) {
   .navbar {
     height: auto;
@@ -345,12 +322,13 @@
   }
 
   .logo img {
-    height: 90px;
+    height: 50px;
   }
 
   .mobile-controls {
     gap: 1rem;
   }
+
   .social-icons-mobile {
     display: flex;
     align-items: center;
@@ -359,6 +337,7 @@
     cursor: pointer;
     margin-top: 70px;
   }
+
   .top-nav-right-mobile {
     display: flex;
     gap: 2rem;
@@ -369,10 +348,9 @@
     margin-bottom: 2rem;
   }
 
-  .social-icon-search,
-  .hamburger-icon {
-    width: 90px;
-    height: 90px;
+  .hamburger-menu {
+    display: block;
+    font-size: 2rem;
   }
 
   .mobile-menu {
@@ -380,55 +358,52 @@
     height: calc(100vh - 50px);
   }
 
-  .mobile-menu-links {
-    padding: 1rem;
-  }
-
   .search-popup input {
     width: 85%;
     font-size: 1rem;
     padding: 0.75rem;
   }
-}
-/* Mobile Dropdown Menu */
-.mobile-nav-item {
-  position: relative;
+
+  .social-icon-search-mobile {
+    display: block;
+  }
 }
 
-.mobile-nav-item:hover .mobile-dropdown,
-.mobile-nav-item:focus-within .mobile-dropdown {
-  display: block;
-}
+/* Small screens (300px to 600px) */
+@media screen and (max-width: 300px) {
+  .logo img {
+    height: 30px;
+  }
 
-.mobile-dropdown {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  background-color: black;
-  width: 100%;
-  padding: 1rem;
-  z-index: 1010; /* Ensure dropdown is above other content */
-}
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    font-size: 3rem;
+  }
 
-.mobile-dropdown a {
-  display: block;
-  color: white;
-  padding: 0.5rem;
-  font-size: 1rem;
-  text-decoration: none;
-}
+  .search-popup input {
+    width: 70%;
+    font-size: 0.8rem;
+  }
 
-.mobile-dropdown a:hover {
-  color: #ccc;
+  /* Hide other elements and keep essential ones */
+  .top-nav-right, .main-nav, .social-icons, .mobile-menu-links {
+    display: none;
+  }
+
+  .social-icon-search-mobile {
+    display: block;
+  }
+
+  .search-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
-/* .social-icon-search-mobile {
-  color: white;
-  width: 24px;
-  height: 23px;
-  margin-left: 37rem;
-  cursor: pointer;
-}
-.social-icon-search-mobile {
-  display: block;
-} */

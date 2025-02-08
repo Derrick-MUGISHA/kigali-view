@@ -15,6 +15,7 @@
   gap: 2rem;
   background-color: #f3f4f6;
   min-height: 100vh;
+  flex-wrap: wrap;
 }
 
 /* Sidebar */
@@ -187,39 +188,6 @@
   flex-direction: column;
 }
 
-.events-view-sort {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.events-view-sort__view-buttons,
-.events-view-sort__sort-buttons {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.events-view-sort__view-button,
-.events-view-sort__sort-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  color: #4b5563;
-  transition: background-color 0.2s;
-  margin-bottom: 1rem;
-}
-
-.events-view-sort__view-button.active,
-.events-view-sort__sort-button.active {
-  background-color: #111827;
-  color: white;
-}
-
 /* Events Grid */
 .events-grid {
   display: grid;
@@ -330,14 +298,39 @@
 .mobile-menu-toggle {
   display: none;
 }
+.events-view-sort__view-buttons, 
+.events-view-sort__sort-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Added for responsiveness */
+}
 
+.events-view-sort__view-button, 
+.events-view-sort__sort-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: #4b5563;
+  transition: background-color 0.2s;
+  margin-bottom: 1rem;
+}
+
+.events-view-sort__view-button.active, 
+.events-view-sort__sort-button.active {
+  background-color: #111827;
+  color: white;
+}
 /* Responsive Styles */
 @media screen and (max-width: 1200px) {
   .events-container {
     max-width: 100%;
     padding: 1rem;
   }
-  
+
   .events-grid.grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
@@ -404,6 +397,7 @@
 @media screen and (max-width: 480px) {
   .events-container {
     padding: 0.5rem;
+    max-width: 100%;
   }
 
   .events-grid__event-image {
@@ -418,5 +412,35 @@
     width: 1.75rem;
     height: 1.75rem;
     font-size: 0.875rem;
+  }
+
+  .events-view-sort__view-buttons {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .events-container {
+    padding: 0.25rem;
+  }
+  .events-grid__event-image {
+    height: 150px;
+  }
+
+  .events-grid__event-details {
+    padding: 0.5rem;
+  }
+
+  .calendar-container__day {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .events-view-sort__view-buttons,
+  .events-view-sort__sort-buttons {
+    display: flex;
+    gap: -0.5rem;
+    align-items: center;
+    flex-direction: row;
   }
 }

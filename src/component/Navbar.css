@@ -172,7 +172,7 @@
 .mobile-menu {
   display: block;
   position: fixed;
-  top: 60px;
+  top: 85px;
   right: 0;
   width: 100%;
   height: calc(100vh - 60px);
@@ -251,6 +251,7 @@
 @media screen and (max-width: 960px) {
   .navbar {
     height: auto;
+    position: fixed;
   }
 
   .top-nav {
@@ -260,7 +261,8 @@
   }
 
   .logo img {
-    height: 30px;
+    height: 70px;
+    width: 70px;
   }
 
   .mobile-controls {
@@ -296,7 +298,7 @@
     display: flex;
     align-items: center;
     gap: 2.5rem;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     cursor: pointer;
     margin-top: 70px;
   }
@@ -308,6 +310,7 @@
     margin-left: auto;
     margin-right: 1rem;
     cursor: pointer;
+    display: block;
   }
 }
 
@@ -333,7 +336,7 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    margin-left: 0.5rem;
+    margin-left: 1.9rem;
     cursor: pointer;
     margin-top: 70px;
   }
@@ -343,7 +346,7 @@
     gap: 2rem;
     flex-direction: column;
     align-items: left;
-    margin-left: 1rem;
+    margin-left: 2rem;
     font-size: 0.9rem;
     margin-bottom: 2rem;
   }
@@ -373,12 +376,13 @@
 @media screen and (max-width: 300px) {
   .logo img {
     height: 30px;
+    width: 30px;
   }
 
   .hamburger-menu {
     display: block;
     cursor: pointer;
-    font-size: 3rem;
+    /* font-size: 3rem; */
   }
 
   .search-popup input {
@@ -387,7 +391,7 @@
   }
 
   /* Hide other elements and keep essential ones */
-  .top-nav-right, .main-nav, .social-icons, .mobile-menu-links {
+  .top-nav-right, .main-nav, .social-icons {
     display: none;
   }
 
@@ -405,5 +409,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .top-nav-right-mobile {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
   }
 }

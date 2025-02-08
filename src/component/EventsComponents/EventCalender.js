@@ -61,10 +61,10 @@ const Events = () => {
   const events = [
     {
       id: 1,
-      image: "https://i.postimg.cc/vmH8rtss/kigali-view-high-resolution-logo.png",
-      title: "Otterbein Men's Basketball vs Marietta College",
-      location: "Rike Center",
-      recurring: null
+      image: "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F931396743%2F2570404762021%2F1%2Foriginal.20250109-115052?crop=focalpoint&fit=crop&w=940&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=ef642832dd3754c332bfd7338cd48636",
+      title: "14thAvenue - Kigali Live Music",
+      location: "Kimihurura kn 20 ave Kigali, Kigali City",
+      recurring: "Recurring daily until February 16, 2025"
     },
     {
       id: 2,
@@ -144,7 +144,7 @@ const Events = () => {
       title: "Columbus Improv Comedy Meetup!",
       location: "Nest Theatre",
       recurring: null
-      
+
     }
   ];
 
@@ -176,22 +176,21 @@ const Events = () => {
         <div className="events-sidebar__section">
           <h2 className="events-sidebar__section-title">CATEGORIES</h2>
           <div className="events-sidebar__category">
-            <input type="checkbox" id="music" />
-            <label htmlFor="music">Music/Concerts (31)</label>
-            <input type="checkbox" id="sports" />
-            <label htmlFor="sports">Sports (27)</label>
-            <input type="checkbox" id="arts" />
-            <label htmlFor="arts">Arts (19)</label>
-            <input type="checkbox" id="family" />
-            <label htmlFor="family">Family (17)</label>
-            <input type="checkbox" id="festivals" />
-            <label htmlFor="festivals">Festivals (15)</label>
-            <input type="checkbox" id="other" />
-            <label htmlFor="other">Other (12)</label>
-            <input type="checkbox" id="charity" />
-            <label htmlFor="charity">Charity (10)</label>
-            <input type="checkbox" id="recreation" />
-            <label htmlFor="recreation">Recreation (9)</label>
+            <label htmlFor="music">Music/Concerts (31)<input type="checkbox" id="music" /></label>
+
+            <label htmlFor="sports">Sports (27) <input type="checkbox" id="sports" /></label>
+
+            <label htmlFor="arts">Arts (19) <input type="checkbox" id="arts" /></label>
+
+            <label htmlFor="family">Family (17)  <input type="checkbox" id="family" /></label>
+
+            <label htmlFor="festivals">Festivals (15)<input type="checkbox" id="festivals" /></label>
+
+            <label htmlFor="other">Other (12) <input type="checkbox" id="other" /></label>
+
+            <label htmlFor="charity">Charity (10) <input type="checkbox" id="charity" /></label>
+
+            <label htmlFor="recreation">Recreation (9) <input type="checkbox" id="recreation" /></label>
           </div>
         </div>
       </div>

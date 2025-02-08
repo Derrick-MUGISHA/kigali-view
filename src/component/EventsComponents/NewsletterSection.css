@@ -26,7 +26,7 @@
 /* Grid Layout */
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* Single column by default */
   gap: 2rem;
   align-items: center;
 }
@@ -34,6 +34,12 @@
 @media (min-width: 768px) {
   .grid-container {
     grid-template-columns: 1fr 1fr; /* Image and text side by side on medium screens and larger */
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr; /* For larger screens, keep image and text side by side */
   }
 }
 
@@ -46,7 +52,7 @@
 
 .image {
   border-radius: 0.5rem;
-  width: 50%; /* Medium-sized image */
+  width: 50%; /* Medium-sized image by default */
   height: auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -64,18 +70,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center; /* Default to center text on smaller screens */
 }
 
 .title {
   font-size: 2.25rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  width: 300px;
+  width: 300px; /* Limit title width */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
   .title {
     font-size: 3rem;
+    width: 100%; /* Full width title on larger screens */
   }
 }
 
@@ -98,19 +108,61 @@
   transition: background-color 0.3s ease;
   width: fit-content;
   margin-top: 1rem;
+  align-self: center; /* Center the button by default */
 }
 
 .signup-button:hover {
   background-color: #2d3748;
 }
 
-/* Ensuring text aligns well on mobile */
+/* Mobile Adjustments */
 @media (max-width: 767px) {
   .text-content {
     text-align: center;
+    padding: 1rem; /* Add some padding for better spacing */
   }
 
   .image-container {
     display: none; /* Optionally hide the image on smaller devices */
+  }
+
+  .signup-button {
+    width: 100%; /* Make the signup button take full width */
+    margin-top: 2rem; /* Adjust margin */
+  }
+}
+
+/* Tablet Adjustments */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr; /* Keep image and text side by side on tablets */
+  }
+
+  .image-container {
+    display: flex; /* Ensure the image is visible on tablet devices */
+    justify-content: center; /* Center the image */
+  }
+
+  .image {
+    width: 70%; /* Adjust image size for tablets */
+  }
+
+  .signup-button {
+    width: fit-content; /* Keep the button's width adaptive */
+  }
+}
+
+/* For Large Desktop Screens */
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr; /* Ensure side-by-side layout on large screens */
+  }
+
+  .image {
+    width: 60%; /* Adjust image width for larger screens */
+  }
+
+  .text-content {
+    text-align: left; /* Align text to the left on larger screens */
   }
 }

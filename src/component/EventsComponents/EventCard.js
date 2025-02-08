@@ -18,7 +18,7 @@ const EventCard = ({ title, description, imageUrl, sponsored = false }) => (
       <h2 className="event-card-title">{title}</h2>
       <p className="event-card-description">{description}</p>
       <a 
-        href="#" 
+        href="/" 
         className="event-card-link"
       >
         Learn More

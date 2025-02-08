@@ -6,33 +6,33 @@ const RestaurantListings = () => {
   const [viewType, setViewType] = useState('grid');
 
   const categories = [
-    { name: 'American', count: 130 },
-    { name: 'Kid-friendly', count: 81 },
+    { name: 'Fast Food', count: 130 },
+    { name: 'Resotrants', count: 81 },
     { name: 'Coffee/Baked Goods', count: 50 },
     { name: 'Breakfast/Brunch', count: 27 },
-    { name: 'Pizza', count: 22 }
+    { name: 'Burkely', count: 22 }
   ];
 
   const regions = [
-    { name: 'Short North', count: 46 },
+    { name: 'Kigali center', count: 46 },
     { name: 'Downtown', count: 37 },
-    { name: 'Grandview', count: 17 },
-    { name: 'Clintonville', count: 15 },
-    { name: 'German Village', count: 15 }
+    { name: 'East', count: 17 },
+    { name: 'West', count: 15 },
+    { name: 'city side', count: 15 }
   ];
 
   const restaurants = [
     {
-      name: 'Dos Hermanos (Easton)',
-      address: '3946 Morse Crossing Rd',
+      name: 'Fusion Restaurant',
+      address: 'No 5 KN 29 Kiyovu, Kigali Rwanda',
       featured: true,
-      image: 'https://i.postimg.cc/vmH8rtss/kigali-view-high-resolution-logo.png'
+      image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/a2/13/c9/breakfast.jpg?w=900&h=500&s=1'
     },
     {
-      name: "Preston's: A Burger Joint",
+      name: "Filini Restaurant & Bar Kigali",
       address: '2973 N High St',
       featured: true,
-      image: 'https://i.postimg.cc/vmH8rtss/kigali-view-high-resolution-logo.png'
+      image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/d0/9f/5a/caption.jpg?w=900&h=-1&s=1'
     },
     {
       name: "Lindey's",
@@ -78,7 +78,7 @@ const RestaurantListings = () => {
       {/* Hero Section */}
       <div className="hero-section">
         <img 
-          src="https://i.postimg.cc/vmH8rtss/kigali-view-high-resolution-logo.png" 
+          src="https://img.freepik.com/free-photo/side-view-mushroom-frying-with-stove-fire-human-hand-pan_176474-3150.jpg?t=st=1739021913~exp=1739025513~hmac=8fa4cfe2a8361f96209ea09f080bc005fc13e597841d73ce0b16f7a69d43e28d&w=1060" 
           alt="Featured dish" 
           className="hero-image"
         />
@@ -86,8 +86,8 @@ const RestaurantListings = () => {
           <div className="hero-content">
             <div className="hero-text">
               <div className="sponsored">SPONSORED</div>
-              <h2 className="hero-title">Great Eats in a Vintage Space</h2>
-              <p className="hero-description">Stop by our award-winning neighborhood tavern and enjoy American eats, craft brews, and a patio.</p>
+              <h2 className="hero-title">Great Eats in a Kigali Restaurants</h2>
+              <p className="hero-description">Stop By Kigali’s Best Tavern: Enjoy Kigali Eats, Craft Brews, and a Patio Vibe</p>
               <button className="cta-button">
                 Learn More
               </button>
@@ -105,7 +105,7 @@ const RestaurantListings = () => {
           </button>
         </div>
 
-        <h1 className="main-title">Restaurants in Columbus</h1>
+        <h1 className="main-title">Restaurants in Kigali</h1>
 
         <div className="content-wrapper">
           {/* Sidebar */}

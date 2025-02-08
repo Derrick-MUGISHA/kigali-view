@@ -1,7 +1,7 @@
 /* Hero Section */
 .hero-container {
     position: relative;
-    height: 30rem; /* Increase height for more emphasis */
+    height: 50rem; /* Increase height for more emphasis */
     width: 100%;
     overflow: hidden;
     display: flex;

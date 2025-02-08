@@ -45,8 +45,9 @@
 
 .top-nav-right {
   display: flex;
-  gap: 2rem;
+  gap: 6rem;
   align-items: center;
+  margin-left: 3rem;
 }
 
 .top-nav-link {
@@ -64,8 +65,9 @@
 .social-icons {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-left: 2rem;
+  gap: 2rem;
+  margin-right: 5rem;
+  margin-bottom: 1rem;
 }
 
 .social-icon {
@@ -73,6 +75,7 @@
   width: 18px;
   height: 18px;
   transition: color 0.3s ease;
+
 }
 
 .social-icon:hover {
@@ -101,6 +104,9 @@
 
 .search-icon {
   cursor: pointer;
+  margin-top: 0.1rem;
+  width: 18px;
+  height: 18px;
 }
 
 .social-icon-search {
@@ -252,6 +258,8 @@
   .navbar {
     height: auto;
     position: fixed;
+    display: flex;
+    justify-content: space-between;
   }
 
   .top-nav {
@@ -318,6 +326,9 @@
 @media screen and (max-width: 600px) {
   .navbar {
     height: auto;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
   }
 
   .nav-container {
@@ -374,6 +385,14 @@
 
 /* Small screens (300px to 600px) */
 @media screen and (max-width: 300px) {
+  .navbar {
+    height: auto;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 3rem;
+  }
   .logo img {
     height: 30px;
     width: 30px;

@@ -32,6 +32,7 @@
     flex: 1; /* Make the video take up 2/3 of the container */
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     max-width: 100%; /* Ensure the video fits inside container */
 }
 
@@ -57,7 +58,7 @@
 /* Small screens (Mobile phones) */
 @media (max-width: 600px) {
     .columbus-content {
-        flex-direction: column; /* Stack the logo and video vertically */
+        flex-direction: row; /* Stack the logo and video vertically */
         align-items: center; /* Center-align logo and video */
     }
 

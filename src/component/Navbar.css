@@ -267,23 +267,15 @@
 
 /* Large screens (960px and up) */
 @media screen and (max-width: 960px) {
-  .hamburger-menu {
-    display: block;
-    cursor: pointer;
-    font-size: 2rem;  /* Slightly smaller font size */
-  }
-
-  .hamburger-icon {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease-in-out; /* Smooth transition */
-  }
-
+  
   .navbar {
     height: auto;
     position: fixed;
     display: flex;
     justify-content: space-between;
+    width: 100%; /* Ensures the navbar takes the full width */
+    top: 0; /* Keeps the navbar at the top */
+    z-index: 1000; /* Ensures navbar is always on top */
   }
 
   .top-nav {
@@ -294,7 +286,23 @@
 
   .logo img {
     height: 70px;
-    width: 70px;
+    width: 70px; /* Logo size adjusted */
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;  /* Slightly smaller font size */
+    position: absolute;
+    right: 10px; /* Align hamburger to the right */
+    top: 40px; /* Adjust the vertical position */
+    z-index: 1000; /* Keep hamburger menu on top */
+  }
+
+  .hamburger-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hamburger icon */
   }
 
   .mobile-controls {
@@ -303,20 +311,15 @@
     gap: 1.5rem;
   }
 
-  .hamburger-menu {
-    display: flex;
-    cursor: pointer;
-    font-size: 4rem;
-    width: 50px;
-  }
-
-  .top-nav-right,
+  /* Hide unnecessary elements for smaller screens */
+  .top-nav-right, 
   .top-nav .social-icons,
   .main-nav,
   .actions-container {
     display: none;
   }
 
+  /* Mobile Navigation Links */
   .top-nav-right-mobile {
     display: flex;
     gap: 2rem;
@@ -329,7 +332,7 @@
   .social-icons-mobile {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 2rem;
     margin-left: 1.5rem;
     cursor: pointer;
     margin-top: 70px;
@@ -348,12 +351,15 @@
 
 /* Medium screens (600px to 960px) */
 /* Small screens (max-width: 600px) */
+/* For screens between 300px to 600px */
 @media screen and (max-width: 600px) {
+
   .navbar {
     height: auto;
     position: fixed;
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
 
   .nav-container {
@@ -362,7 +368,7 @@
 
   /* Logo */
   .logo img {
-    height: 70px; /* Increased logo size */
+    height: 50px;  /* Adjusted logo size for smaller screens */
     width: auto;
   }
 
@@ -370,51 +376,51 @@
   .hamburger-menu {
     display: block;
     cursor: pointer;
-    font-size: 2.5rem; /* Larger hamburger size */
+    font-size: 2rem; /* Reduced hamburger size for better visibility */
     color: white;
+    position: absolute;
+    right: 10px; /* Align hamburger to the right edge */
+    top: 50%; /* Vertically center it */
+    transform: translateY(-50%); /* Adjust to perfect vertical alignment */
   }
 
   .hamburger-icon {
-    width: 35px; /* Increased size for the hamburger */
-    height: 35px; /* Increased size for the hamburger */
+    width: 30px; /* Adjusted size for the hamburger */
+    height: 30px; /* Adjusted size for the hamburger */
     color: white;
     transition: transform 0.3s ease-in-out; /* Smooth transition */
-    margin-left: 19rem;
-    margin-top: 0.9rem;
   }
 
   /* Search Icon */
   .social-icon-search-mobile {
     display: block;
-    width: 15px;  /* Same size as hamburger */
-    height: 35px; /* Same size as hamburger */
+    width: 25px;  /* Adjusted size to match hamburger */
+    height: 25px; /* Adjusted size to match hamburger */
     margin-left: auto;
     margin-right: 1rem;
     cursor: pointer;
-    display: block;
     margin-top: 0.7rem;
   }
-  
 
   /* Social Icons for Mobile */
   .social-icons-mobile {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    margin-left: 1.9rem;
+    gap: 1.2rem; /* Reduced gap for smaller screens */
+    margin-left: 1.5rem;  /* Adjusted left margin */
     cursor: pointer;
     margin-top: 70px;
   }
 
   .search-popup input {
-    width: 85%;
-    font-size: 1rem;
+    width: 80%; /* Reduced width for the search input */
+    font-size: 0.9rem;
     padding: 0.75rem;
   }
 
   /* Mobile Menu */
   .mobile-menu {
-    top: 90px;
+    top: 80px;  /* Adjusted top positioning */
     height: calc(100vh - 50px);
   }
 
@@ -433,69 +439,89 @@
   /* Top Navigation Right Links for Mobile */
   .top-nav-right-mobile {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;  /* Reduced gap for better fitting */
     flex-direction: column;
     align-items: left;
     margin-left: 2rem;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     margin-bottom: 2rem;
   }
 }
 
+/* For screens smaller than 500px */
+@media screen and (max-width: 500px) {
 
-/* Small screens (300px to 600px) */
-@media screen and (max-width: 300px) {
-  .navbar {
-    height: auto;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    gap: 3rem;
-  }
+  /* Logo */
   .logo img {
-    height: 30px;
-    width: 30px;
+    height: 45px;  /* Smaller logo for screens under 500px */
+    width: auto;
   }
 
+  /* Hamburger Menu */
   .hamburger-menu {
-    display: block;
-    cursor: pointer;
-    font-size: 3rem;
+    font-size: 1.8rem; /* Further reduced hamburger size for smaller screens */
+    right: 10px; /* Ensure hamburger remains on the right */
+    top: 50%;
+    transform: translateY(-50%); /* Keep it vertically centered */
+  }
+
+  .hamburger-icon {
+    width: 28px; /* Further adjusted hamburger size */
+    height: 28px;
+  }
+
+  /* Social Icons for Mobile */
+  .social-icons-mobile {
+    gap: 1rem; /* Reduced gap for very small screens */
+    margin-left: 1rem; /* Reduced left margin */
   }
 
   .search-popup input {
-    width: 70%;
+    width: 70%;  /* Further reduced search input width */
     font-size: 0.8rem;
   }
 
-  /* Hide other elements and keep essential ones */
-  .top-nav-right, .main-nav, .social-icons {
-    display: none;
+  /* Mobile Menu */
+  .mobile-menu {
+    top: 75px; /* Adjusted top positioning for very small screens */
+  }
+}
+
+/* For screens smaller than 300px */
+@media screen and (max-width: 300px) {
+
+  /* Logo */
+  .logo img {
+    height: 40px;  /* Smaller logo for very small screens */
+    width: auto;
   }
 
-  .social-icon-search-mobile {
-    display: block;
+  /* Hamburger Menu */
+  .hamburger-menu {
+    font-size: 1.6rem; /* Further reduced hamburger size */
+    right: 10px; /* Ensure hamburger remains on the right */
+    top: 50%;
+    transform: translateY(-50%); /* Keep it vertically centered */
   }
 
-  .search-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .hamburger-icon {
+    width: 25px; /* Further reduced hamburger size */
+    height: 25px;
   }
-  .top-nav-right-mobile {
-    display: flex;
-    gap: 2rem;
-    flex-direction: column;
-    align-items: left;
-    margin-left: 2rem;
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
+
+  /* Social Icons for Mobile */
+  .social-icons-mobile {
+    gap: 0.8rem; /* Even smaller gap for extremely small screens */
+    margin-left: 0.5rem; /* Further reduced left margin */
+  }
+
+  .search-popup input {
+    width: 60%;  /* Further reduced search input width */
+    font-size: 0.7rem;
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    top: 70px; /* Adjusted top positioning for very small screens */
   }
 }

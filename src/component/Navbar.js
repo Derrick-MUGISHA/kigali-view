@@ -51,7 +51,7 @@ const NavigationBar = () => {
           
           <div className="top-nav-right">
             <Link to="/meeting-planners" className="top-nav-link" onMouseDown={() => setIsSearchOpen(false)}>Meeting Planners</Link>
-            <Link to="/tour-planners" className="top-nav-link">Tour & Reunion Planners</Link>
+            <Link to="*" className="top-nav-link">Tour & Reunion Planners</Link>
             <Link to="/partners" className="top-nav-link">Partners</Link>
             <Link to="/blog" className="top-nav-link">Blog</Link>
           </div>

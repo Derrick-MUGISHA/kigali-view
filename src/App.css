@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+/* Loading container styles */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Logo or heart shape animation */
+.logo {
+  width: 150px;
+  height: auto;
+  animation: pop 1.5s ease-in-out infinite; /* Pop animation */
+}
+
+/* Heart shape animation (if you want to use a heart instead of a logo image) */
+@keyframes pop {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}

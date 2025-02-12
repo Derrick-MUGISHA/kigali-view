@@ -39,15 +39,16 @@ const NavigationBar = () => {
 
   return (
     <nav className="navbar">
-      <div className="nav-container">
-        {/* Top Navigation */}
-        <div className="top-nav">
-          <Link to="/" className="logo">
+      <Link to="/" className="logo">
             <img
               src="https://i.postimg.cc/Gt063b3p/kigali-view-high-resolution-logo-removebg-preview.png"
               alt="logo"
             />
           </Link>
+      <div className="nav-container">
+        {/* Top Navigation */}
+        <div className="top-nav">
+          
           <div className="top-nav-right">
             <Link to="/meeting-planners" className="top-nav-link" onMouseDown={() => setIsSearchOpen(false)}>Meeting Planners</Link>
             <Link to="/tour-planners" className="top-nav-link">Tour & Reunion Planners</Link>

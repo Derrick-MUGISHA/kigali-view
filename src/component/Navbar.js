@@ -72,9 +72,6 @@ const NavigationBar = () => {
             </div>
           </div>
           {/* Mobile Hamburger Menu */}
-          <div className="social-icon-search-mobile" onClick={toggleSearch}>
-            <Search className="social-icon-search" />
-          </div>
           <div className="hamburger-menu" onClick={handleClick}>
             {click ? <X className="hamburger-icon" /> : <Menu className="hamburger-icon" />}
           </div>
@@ -137,6 +134,9 @@ const NavigationBar = () => {
 
         {/* Mobile Menu Overlay */}
         <div className={`mobile-menu ${click ? "open" : ""}`}>
+        <div className="social-icon-search-mobile" onClick={toggleSearch}>
+            <Search className="social-icon-search" />
+          </div>
 
           <ul className="mobile-menu-links">
             <li
@@ -202,6 +202,7 @@ const NavigationBar = () => {
             <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><Youtube className="social-icon" /></a>
           </div>
         </div>
+        
 
       </div>
 

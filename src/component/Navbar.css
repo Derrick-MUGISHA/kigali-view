@@ -7,11 +7,15 @@
 /* Main Navigation Container */
 .navbar {
   background-color: black;
+  transition: background-color 0.3s ease; 
   width: 100%;
   position: relative; /* Changed from 'fixed' to 'relative' */
   top: 0;
   z-index: 1000;
   display: flex;
+}
+.navbar:hover {
+  background-color: #333; /* Darken background slightly on hover */
 }
 
 .nav-container {
@@ -126,11 +130,10 @@
 
 .main-nav-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 0.1rem;
 }
 
 .nav-item {
@@ -144,11 +147,13 @@
   font-weight: 600;
   padding: 0.5rem;
   display: block;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, font-size 0.3s ease;
 }
 
 .main-nav-link:hover {
   color: #ccc;
+  text-decoration: underline;
+  font-size: 1.05rem;
 }
 
 /* Dropdown Styles */
@@ -171,12 +176,14 @@
 .hamburger-menu {
   display: none;
   cursor: pointer;
+  font-size: 1.8rem;
 }
 
 .hamburger-icon {
   color: white;
   width: 24px;
   height: 24px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .mobile-menu {
@@ -189,7 +196,7 @@
   background-color: black;
   overflow-y: auto;
   transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
 }
 
 .mobile-menu.open {
@@ -200,6 +207,7 @@
   list-style: none;
   padding: 2rem;
   margin: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .mobile-nav-item {
@@ -259,6 +267,18 @@
 
 /* Large screens (960px and up) */
 @media screen and (max-width: 960px) {
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;  /* Slightly smaller font size */
+  }
+
+  .hamburger-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+  }
+
   .navbar {
     height: auto;
     position: fixed;
@@ -327,6 +347,7 @@
 }
 
 /* Medium screens (600px to 960px) */
+/* Small screens (max-width: 600px) */
 @media screen and (max-width: 600px) {
   .navbar {
     height: auto;
@@ -339,14 +360,43 @@
     padding: 0 0.75rem;
   }
 
+  /* Logo */
   .logo img {
-    height: 50px;
+    height: 70px; /* Increased logo size */
+    width: auto;
   }
 
-  .mobile-controls {
-    gap: 1rem;
+  /* Hamburger Menu */
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    font-size: 2.5rem; /* Larger hamburger size */
+    color: white;
   }
 
+  .hamburger-icon {
+    width: 35px; /* Increased size for the hamburger */
+    height: 35px; /* Increased size for the hamburger */
+    color: white;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    margin-left: 20rem;
+    margin-top: 0.9rem;
+  }
+
+  /* Search Icon */
+  .social-icon-search-mobile {
+    display: block;
+    width: 15px;  /* Same size as hamburger */
+    height: 35px; /* Same size as hamburger */
+    margin-left: auto;
+    margin-right: 1rem;
+    cursor: pointer;
+    display: block;
+    margin-top: 0.7rem;
+  }
+  
+
+  /* Social Icons for Mobile */
   .social-icons-mobile {
     display: flex;
     align-items: center;
@@ -356,6 +406,31 @@
     margin-top: 70px;
   }
 
+  .search-popup input {
+    width: 85%;
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    top: 90px;
+    height: calc(100vh - 50px);
+  }
+
+  /* Hide other elements and keep essential ones */
+  .top-nav-right, .main-nav, .social-icons {
+    display: none;
+  }
+
+  /* Mobile Menu Links */
+  .mobile-menu-links {
+    list-style: none;
+    padding: 2rem;
+    margin: 0;
+  }
+
+  /* Top Navigation Right Links for Mobile */
   .top-nav-right-mobile {
     display: flex;
     gap: 2rem;
@@ -365,27 +440,8 @@
     font-size: 0.9rem;
     margin-bottom: 2rem;
   }
-
-  .hamburger-menu {
-    display: block;
-    font-size: 2rem;
-  }
-
-  .mobile-menu {
-    top: 90px;
-    height: calc(100vh - 50px);
-  }
-
-  .search-popup input {
-    width: 85%;
-    font-size: 1rem;
-    padding: 0.75rem;
-  }
-
-  .social-icon-search-mobile {
-    display: block;
-  }
 }
+
 
 /* Small screens (300px to 600px) */
 @media screen and (max-width: 300px) {

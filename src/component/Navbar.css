@@ -473,7 +473,7 @@
   /* Social Icons for Mobile */
   .social-icons-mobile {
     gap: 1rem; /* Reduced gap for very small screens */
-    margin-left: 1rem; /* Reduced left margin */
+    margin-left: 2rem; /* Reduced left margin */
   }
 
   .search-popup input {
@@ -492,7 +492,7 @@
 
   /* Logo */
   .logo img {
-    height: 40px;  /* Smaller logo for very small screens */
+    height: 80px;  /* Smaller logo for very small screens */
     width: auto;
   }
 
@@ -512,7 +512,7 @@
   /* Social Icons for Mobile */
   .social-icons-mobile {
     gap: 0.8rem; /* Even smaller gap for extremely small screens */
-    margin-left: 0.5rem; /* Further reduced left margin */
+    margin-left: 2rem; /* Further reduced left margin */
   }
 
   .search-popup input {
@@ -522,6 +522,6 @@
 
   /* Mobile Menu */
   .mobile-menu {
-    top: 70px; /* Adjusted top positioning for very small screens */
+    top: 80px; /* Adjusted top positioning for very small screens */
   }
 }

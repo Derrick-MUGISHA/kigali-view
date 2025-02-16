@@ -14,7 +14,7 @@ export const Hotels = () => {
       cName: "dropdown-link",
     },
     {
-      title: "The Retreat by Heaven ",
+      title: "The Retreat by Heaven",
       path: "/bourbon-coffee",
       cName: "dropdown-link",
     },
